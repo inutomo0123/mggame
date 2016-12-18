@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 平目コンサルタント
+
+two:
+  name: サビキ会計事務所
+
+three:
+  name: 株式会社FGノット
