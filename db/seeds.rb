@@ -46,3 +46,8 @@ AccountTitle.create id: 23, symbol: "ト", name: "特別損失",   is_income: fa
 AccountTitle.create id: 24, symbol: "ナ", name: "借入金返済", is_income: false
 AccountTitle.create id: 25, symbol: "ニ", name: "配当・納税", is_income: false
 AccountTitle.create id: 26, symbol: "ヌ", name: "買掛金支払", is_income: false
+
+#stock_rooms
+StockRoom.create id: 1, symbol: '倉', name: '倉庫'
+StockRoom.create id: 2, symbol: '工', name: '工場'
+StockRoom.create id: 3, symbol: '営', name: '営業所'
