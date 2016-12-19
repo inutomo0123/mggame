@@ -52,3 +52,31 @@ Job.create id: 2, symbol: 'せ', name: 'セールスマン'
 MachineTool.create id: 1, symbol: '小機', name: '小型機械'
 MachineTool.create id: 2, symbol: 'アタ', name: 'アタッチメント'
 MachineTool.create id: 3, symbol: '大機', name: '大型機械'
+
+# ワーカー: -1, 退職金（一般管理費）: 5
+Risk.create id: 2, number: '2', name: "ワーカー退職"
+# セールスマン: -1, 退職金（一般管理費）: 5
+Risk.create id: 4, number: '4', name: "セールスマン退職"
+# 販売費: 5
+Risk.create id: 6, number: '6', name: "クレーム発生"
+# 営業所在庫: -2, 受取保険金: 10 * n, 保険: -n
+# TODO: 保険の使用を確認する
+Risk.create id: 9, number: '9', name: "盗難発見！"
+# 仕掛品（工場在庫）: -1
+Risk.create id: 10, number: '10', name: "製造ミス発生"
+# 倉庫在庫: -all, 受取保険金: 8 * n, 保険 -n
+Risk.create id: 11, number: '11', name: "倉庫火災"
+# 修理費（製造経費）: 5
+Risk.create id: 17, number: '17', name: "機械故障"
+# 改修費(製造経費) : 5
+Risk.create id: 18, number: '18', name: "設計トラブル発生！"
+Risk.create id: 1, number: '1', name: "特別サービス！"
+Risk.create id: 3, number: '3', name: "商品の独占販売"
+Risk.create id: 5, number: '5', name: "研究開発成功!!"
+Risk.create id: 7, number: '7', name: "ストライキ発生"
+Risk.create id: 8, number: '8', name: "社長病気で倒る"
+Risk.create id: 12, number: '12', name: "研究開発失敗"
+Risk.create id: 13, number: '13', name: "消費者運動発生"
+Risk.create id: 14, number: '14', name: "逆回り"
+Risk.create id: 15, number: '15', name: "労災発生"
+Risk.create id: 16, number: '16', name: "各社共通"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219112120) do
+ActiveRecord::Schema.define(version: 20161219114048) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,  null: false
@@ -102,6 +102,15 @@ ActiveRecord::Schema.define(version: 20161219112120) do
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.index ["name"], name: "index_providers_on_name", unique: true, using: :btree
+  end
+
+  create_table "risks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "number",                null: false
+    t.string   "name",       limit: 50, null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["name"], name: "index_risks_on_name", unique: true, using: :btree
+    t.index ["number"], name: "index_risks_on_number", unique: true, using: :btree
   end
 
   create_table "rounds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
