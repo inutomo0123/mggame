@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219025928) do
+ActiveRecord::Schema.define(version: 20161219034018) do
 
   create_table "clients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "provider_id",            null: false
@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 20161219025928) do
     t.index ["name"], name: "index_providers_on_name", unique: true, using: :btree
   end
 
+  create_table "trainings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "client_id",             null: false
+    t.date     "do_at",                 null: false
+    t.string   "name",       limit: 50, null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["client_id", "do_at", "name"], name: "index_trainings_on_client_id_and_do_at_and_name", unique: true, using: :btree
+    t.index ["client_id"], name: "index_trainings_on_client_id", using: :btree
+  end
+
   add_foreign_key "clients", "providers"
   add_foreign_key "players", "clients"
+  add_foreign_key "trainings", "clients"
 end
