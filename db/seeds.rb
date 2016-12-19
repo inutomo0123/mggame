@@ -13,3 +13,8 @@ Chip.create id: 3, symbol: '保', name: '保険', color: 'cream'
 Chip.create id: 4, symbol: 'PC', name: 'PAC生産性', color: 'green'
 Chip.create id: 5, symbol: 'MD', name: 'マーチャンダイザー', color: 'green'
 Chip.create id: 6, symbol: 'MR', name: 'マーケット・リサーチ', color: 'green'
+
+#account_types
+AccountType.create id: 1, symbol: '現金', name: '現金'
+AccountType.create id: 2, symbol: '売掛', name: '売掛金'
+AccountType.create id: 3, symbol: '買掛', name: '買掛金'
