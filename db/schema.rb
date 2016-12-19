@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219102925) do
+ActiveRecord::Schema.define(version: 20161219104123) do
+
+  create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "symbol",     limit: 1,  null: false
+    t.string   "name",       limit: 50, null: false
+    t.boolean  "is_income",             null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["name"], name: "index_account_titles_on_name", unique: true, using: :btree
+    t.index ["symbol"], name: "index_account_titles_on_symbol", unique: true, using: :btree
+  end
 
   create_table "account_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 2,  null: false
