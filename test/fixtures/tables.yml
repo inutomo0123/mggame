@@ -1,0 +1,19 @@
+<%
+names = ['第一回MGゲーム研修会', '第二回MGゲーム研修会', '第三回MGゲーム研修会']
+
+clients = [:hiramasa, :"under-shot", :pe, :hook]
+
+tables = ('A'..'G').to_a
+
+clients.each_with_index do |client, i|
+  names.each_with_index do |name, j|
+    tables.each do |table|
+      %>
+      <%="table_#{i}_#{j}_#{table}"%>:
+        symbol: <%=table%>
+        training: <%="training_#{i}_#{j}"%>
+      <%
+    end
+  end
+end
+%>
