@@ -155,3 +155,6 @@ bower.json
 .byebug_history
 
 # End of https://www.gitignore.io/api/macos,linux,ruby,rails
+
+# Ignore Spring files.
+/spring/*.pid
