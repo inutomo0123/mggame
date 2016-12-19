@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219114048) do
+ActiveRecord::Schema.define(version: 20161219125846) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,  null: false
@@ -48,6 +48,16 @@ ActiveRecord::Schema.define(version: 20161219114048) do
     t.datetime "updated_at",             null: false
     t.index ["provider_id", "name"], name: "index_clients_on_provider_id_and_name", unique: true, using: :btree
     t.index ["provider_id"], name: "index_clients_on_provider_id", using: :btree
+  end
+
+  create_table "decision_makings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "symbol",     limit: 1,  null: false
+    t.string   "name",       limit: 50, null: false
+    t.boolean  "is_anytime",            null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["name"], name: "index_decision_makings_on_name", unique: true, using: :btree
+    t.index ["symbol"], name: "index_decision_makings_on_symbol", unique: true, using: :btree
   end
 
   create_table "entries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

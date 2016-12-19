@@ -80,3 +80,21 @@ Risk.create id: 13, number: '13', name: "消費者運動発生"
 Risk.create id: 14, number: '14', name: "逆回り"
 Risk.create id: 15, number: '15', name: "労災発生"
 Risk.create id: 16, number: '16', name: "各社共通"
+
+# decision_makings
+# 一回につき一項目
+DecisionMaking.create id: 1, symbol: 'A', name: '材料購入', is_anytime: false
+DecisionMaking.create id: 2, symbol: 'B', name: '設備投資', is_anytime: false
+DecisionMaking.create id: 3, symbol: 'C', name: '完成・投入', is_anytime: false
+DecisionMaking.create id: 4, symbol: 'D', name: '採用', is_anytime: false
+DecisionMaking.create id: 5, symbol: 'E', name: '広告', is_anytime: false
+DecisionMaking.create id: 6, symbol: 'F', name: '研究開発', is_anytime: false
+
+# いつでも実施可能
+DecisionMaking.create id: 10, symbol: 'G', name: '保険', is_anytime: true
+DecisionMaking.create id: 11, symbol: 'H', name: 'PAC生産性', is_anytime: true
+DecisionMaking.create id: 12, symbol: 'I', name: 'マーチャンダイザー', is_anytime: true
+DecisionMaking.create id: 13, symbol: 'J', name: 'マーケット・リサーチ', is_anytime: true
+DecisionMaking.create id: 14, symbol: 'K', name: '銀行借入', is_anytime: true
+DecisionMaking.create id: 15, symbol: 'L', name: '配置転換', is_anytime: true
+DecisionMaking.create id: 16, symbol: 'M', name: '機械売却', is_anytime: true
