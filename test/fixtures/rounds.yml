@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+<%
+names = ['第一回MGゲーム研修会', '第二回MGゲーム研修会', '第三回MGゲーム研修会']
+
+clients = [:hiramasa, :"under-shot", :pe, :hook]
+
+rounds = (1..4).to_a
+
+clients.each_with_index do |client, i|
+  names.each_with_index do |name, j|
+    rounds.each do |round|
+      %>
+      <%="round_#{i}_#{j}_#{round}"%>:
+        number: <%=round%>
+        training: <%="training_#{i}_#{j}"%>
+      <%
+    end
+  end
+end
+%>
