@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+hiramasa:
+  name: 株式会社平政
+  provider: one
+
+under-shot:
+  name: 株式会社アンダーショット
+  provider: two
+
+pe:
+  name: PEコーポレーション
+  provider: one
+
+hook:
+  name: 株式会社フック
+  provider:  two
