@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#chips
+Chip.create id: 1, symbol: '広', name: '広告', color: 'red'
+Chip.create id: 2, symbol: '研', name: '研究開発', color: 'blue'
+Chip.create id: 3, symbol: '保', name: '保険', color: 'cream'
+Chip.create id: 4, symbol: 'PC', name: 'PAC生産性', color: 'green'
+Chip.create id: 5, symbol: 'MD', name: 'マーチャンダイザー', color: 'green'
+Chip.create id: 6, symbol: 'MR', name: 'マーケット・リサーチ', color: 'green'
