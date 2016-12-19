@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+umemiya:
+  name: 梅宮辰夫
+  client: hiramasa
+
+tatsukata:
+  name: 松方弘樹
+  client: hiramasa
+
+eguchi:
+  name: 江口洋介
+  client: under-shot
+
+oda:
+  name: 織田裕二
+  client: under-shot
+
+okamura:
+  name: 岡村隆史
+  client: pe
+
+hiromi:
+  name: ヒロミ
+  client: pe
+
+okuda:
+  name: 奥田民生
+  client: hook
+
+kimura:
+  name: 木村拓哉
+  client: hook
