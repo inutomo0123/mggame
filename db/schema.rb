@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219110150) do
+ActiveRecord::Schema.define(version: 20161219111308) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,  null: false
@@ -68,6 +68,15 @@ ActiveRecord::Schema.define(version: 20161219110150) do
     t.index ["round_id", "table_id"], name: "index_games_on_round_id_and_table_id", unique: true, using: :btree
     t.index ["round_id"], name: "index_games_on_round_id", using: :btree
     t.index ["table_id"], name: "index_games_on_table_id", using: :btree
+  end
+
+  create_table "jobs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "symbol",     limit: 1,  null: false
+    t.string   "name",       limit: 50, null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["name"], name: "index_jobs_on_name", unique: true, using: :btree
+    t.index ["symbol"], name: "index_jobs_on_symbol", unique: true, using: :btree
   end
 
   create_table "players", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

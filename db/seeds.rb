@@ -51,3 +51,7 @@ AccountTitle.create id: 26, symbol: "ヌ", name: "買掛金支払", is_income: f
 StockRoom.create id: 1, symbol: '倉', name: '倉庫'
 StockRoom.create id: 2, symbol: '工', name: '工場'
 StockRoom.create id: 3, symbol: '営', name: '営業所'
+
+#jobs
+Job.create id: 1, symbol: 'わ', name: 'ワーカー'
+Job.create id: 2, symbol: 'せ', name: 'セールスマン'
