@@ -1,0 +1,11 @@
+<%
+(Chip.all).each_with_index do |chip, i|
+  %>
+  option_<%=i%>:
+    entry: one
+    chip_id: <%=chip.id%>
+    number: 0
+  <%
+end
+
+%>

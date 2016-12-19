@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219125846) do
+ActiveRecord::Schema.define(version: 20161219152823) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,  null: false
@@ -98,6 +98,17 @@ ActiveRecord::Schema.define(version: 20161219125846) do
     t.index ["symbol"], name: "index_machine_tools_on_symbol", unique: true, using: :btree
   end
 
+  create_table "options", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "entry_id",               null: false
+    t.integer  "chip_id",                null: false
+    t.integer  "number",     default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["chip_id"], name: "index_options_on_chip_id", using: :btree
+    t.index ["entry_id", "chip_id"], name: "index_options_on_entry_id_and_chip_id", unique: true, using: :btree
+    t.index ["entry_id"], name: "index_options_on_entry_id", using: :btree
+  end
+
   create_table "players", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "client_id",             null: false
     t.string   "name",       limit: 50, null: false
@@ -165,6 +176,8 @@ ActiveRecord::Schema.define(version: 20161219125846) do
   add_foreign_key "entries", "players"
   add_foreign_key "games", "rounds"
   add_foreign_key "games", "tables"
+  add_foreign_key "options", "chips"
+  add_foreign_key "options", "entries"
   add_foreign_key "players", "clients"
   add_foreign_key "rounds", "trainings"
   add_foreign_key "tables", "trainings"
