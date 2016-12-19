@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219072818) do
+ActiveRecord::Schema.define(version: 20161219075423) do
 
   create_table "clients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "provider_id",            null: false
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20161219072818) do
     t.datetime "updated_at",             null: false
     t.index ["provider_id", "name"], name: "index_clients_on_provider_id_and_name", unique: true, using: :btree
     t.index ["provider_id"], name: "index_clients_on_provider_id", using: :btree
+  end
+
+  create_table "games", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "round_id",   null: false
+    t.integer  "table_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["round_id", "table_id"], name: "index_games_on_round_id_and_table_id", unique: true, using: :btree
+    t.index ["round_id"], name: "index_games_on_round_id", using: :btree
+    t.index ["table_id"], name: "index_games_on_table_id", using: :btree
   end
 
   create_table "players", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -66,6 +76,8 @@ ActiveRecord::Schema.define(version: 20161219072818) do
   end
 
   add_foreign_key "clients", "providers"
+  add_foreign_key "games", "rounds"
+  add_foreign_key "games", "tables"
   add_foreign_key "players", "clients"
   add_foreign_key "rounds", "trainings"
   add_foreign_key "tables", "trainings"
