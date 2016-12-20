@@ -98,3 +98,10 @@ DecisionMaking.create id: 13, symbol: 'J', name: 'マーケット・リサーチ
 DecisionMaking.create id: 14, symbol: 'K', name: '銀行借入', is_anytime: true
 DecisionMaking.create id: 15, symbol: 'L', name: '配置転換', is_anytime: true
 DecisionMaking.create id: 16, symbol: 'M', name: '機械売却', is_anytime: true
+
+# behavior_types
+BehaviorType.create id: 1,  symbol: '仕', name: '仕訳'
+BehaviorType.create id: 2,  symbol: '意', name: '意思決定'
+BehaviorType.create id: 3,  symbol: 'リ', name: 'リスク対応'
+BehaviorType.create id: 4,  symbol: '首', name: '期首処理'
+BehaviorType.create id: 5,  symbol: '末', name: '期末処理'
