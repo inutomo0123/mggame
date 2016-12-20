@@ -1,0 +1,11 @@
+one:
+  id: 10
+  entry: one
+  behavior_type_id: 1
+  parent_behavior_id: null
+
+two:
+  id: 20
+  entry: one
+  behavior_type_id: 2
+  parent_behavior_id: 10
