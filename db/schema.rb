@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161220062133) do
+ActiveRecord::Schema.define(version: 20161224024434) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,  null: false
@@ -109,6 +109,20 @@ ActiveRecord::Schema.define(version: 20161220062133) do
     t.index ["symbol"], name: "index_jobs_on_symbol", unique: true, using: :btree
   end
 
+  create_table "journals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "entry_id",                     null: false
+    t.integer  "account_title_id",             null: false
+    t.integer  "serial",           default: 0
+    t.integer  "price",            default: 0, null: false
+    t.integer  "quantity",         default: 0, null: false
+    t.integer  "amount",           default: 0, null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["account_title_id"], name: "index_journals_on_account_title_id", using: :btree
+    t.index ["entry_id", "serial"], name: "index_journals_on_entry_id_and_serial", unique: true, using: :btree
+    t.index ["entry_id"], name: "index_journals_on_entry_id", using: :btree
+  end
+
   create_table "machine_tools", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 2,  null: false
     t.string   "name",       limit: 50, null: false
@@ -198,6 +212,8 @@ ActiveRecord::Schema.define(version: 20161220062133) do
   add_foreign_key "entries", "players"
   add_foreign_key "games", "rounds"
   add_foreign_key "games", "tables"
+  add_foreign_key "journals", "account_titles"
+  add_foreign_key "journals", "entries"
   add_foreign_key "options", "chips"
   add_foreign_key "options", "entries"
   add_foreign_key "players", "clients"

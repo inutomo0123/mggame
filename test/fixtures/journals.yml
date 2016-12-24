@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  entry: one
+  account_title_id: 1
+  price: 100
+  quantity: 2
+  amount: 200
+
+two:
+  entry: one
+  account_title_id: 2
+  price: 150
+  quantity: 3
+  amount: 450
