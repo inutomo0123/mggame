@@ -9,7 +9,7 @@ one:
 
 two:
   entry: one
-  account_title_id: 2
+  account_title_id: 1
   price: 150
   quantity: 3
   amount: 450

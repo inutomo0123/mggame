@@ -1,4 +1,7 @@
 class Journal < ApplicationRecord
+
+  URIKAKEKIN_NYUUKIN_ID = 1
+
   belongs_to :entry
   belongs_to :account_title
 
