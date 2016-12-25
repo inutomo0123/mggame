@@ -13,31 +13,31 @@ AccountType.create id: 3, symbol: '買掛', name: '買掛金'
 
 # account_titles
 # 入金勘定
-AccountTitle.create id: 1, symbol: "ア", name: "売掛金入金", is_income: true
-AccountTitle.create id: 2, symbol: "イ", name: "機械売却",   is_income: true
-AccountTitle.create id: 3, symbol: "ウ", name: "営業外収益", is_income: true
-AccountTitle.create id: 4, symbol: "エ", name: "受取保険金", is_income: true
-AccountTitle.create id: 5, symbol: "オ", name: "借入金",     is_income: true
-AccountTitle.create id: 6, symbol: "カ", name: "資本金",     is_income: true
-AccountTitle.create id: 7, symbol: "キ", name: "売上",       is_income: true
+AccountTitle.create id: 1, symbol: "ア", name: "売掛金入金", is_income: true # URIKAKEKIN_NYUUKIN = 1
+AccountTitle.create id: 2, symbol: "イ", name: "機械売却",   is_income: true # KIKAI_BAIKYAKU = 2
+AccountTitle.create id: 3, symbol: "ウ", name: "営業外収益", is_income: true # EIGYOUGAI_SHUUEKI = 3
+AccountTitle.create id: 4, symbol: "エ", name: "受取保険金", is_income: true # UKETORI_HOKENKIN = 4
+AccountTitle.create id: 5, symbol: "オ", name: "借入金",     is_income: true # KARIIREKIN = 5
+AccountTitle.create id: 6, symbol: "カ", name: "資本金",     is_income: true # SHIHONKIN = 6
+AccountTitle.create id: 7, symbol: "キ", name: "売上",       is_income: true # URIAGE = 7
 
 # 出金勘定
-AccountTitle.create id: 11, symbol: "ク", name: "貸付金",     is_income: false
-AccountTitle.create id: 12, symbol: "ケ", name: "機械工具",   is_income: false
-AccountTitle.create id: 13, symbol: "コ", name: "投入費",     is_income: false
-AccountTitle.create id: 14, symbol: "サ", name: "完成費",     is_income: false
-AccountTitle.create id: 15, symbol: "シ", name: "労務費",     is_income: false
-AccountTitle.create id: 16, symbol: "ス", name: "製造経費",   is_income: false
-AccountTitle.create id: 17, symbol: "セ", name: "販売費",     is_income: false
-AccountTitle.create id: 18, symbol: "ソ", name: "一般管理費", is_income: false
-AccountTitle.create id: 19, symbol: "タ", name: "営業外費用", is_income: false
-AccountTitle.create id: 20, symbol: "チ", name: "研究開発費", is_income: false
-AccountTitle.create id: 21, symbol: "ツ", name: "材料",       is_income: false
-AccountTitle.create id: 22, symbol: "テ", name: "製品",       is_income: false
-AccountTitle.create id: 23, symbol: "ト", name: "特別損失",   is_income: false
-AccountTitle.create id: 24, symbol: "ナ", name: "借入金返済", is_income: false
-AccountTitle.create id: 25, symbol: "ニ", name: "配当・納税", is_income: false
-AccountTitle.create id: 26, symbol: "ヌ", name: "買掛金支払", is_income: false
+AccountTitle.create id: 11, symbol: "ク", name: "貸付金",     is_income: false # KASHITSUKEKIN = 11
+AccountTitle.create id: 12, symbol: "ケ", name: "機械工具",   is_income: false # KIKAI_KOUGU = 12
+AccountTitle.create id: 13, symbol: "コ", name: "投入費",     is_income: false # TOUNYUUHI = 13
+AccountTitle.create id: 14, symbol: "サ", name: "完成費",     is_income: false # KANSEIHI = 14
+AccountTitle.create id: 15, symbol: "シ", name: "労務費",     is_income: false # ROUMUHI = 15
+AccountTitle.create id: 16, symbol: "ス", name: "製造経費",   is_income: false # SEIZOU_KEIHI = 16
+AccountTitle.create id: 17, symbol: "セ", name: "販売費",     is_income: false # HANBAIHI = 17
+AccountTitle.create id: 18, symbol: "ソ", name: "一般管理費", is_income: false # IPPAN_KANRIHI = 18
+AccountTitle.create id: 19, symbol: "タ", name: "営業外費用", is_income: false # EIGYOUGAI_HIYOU = 19
+AccountTitle.create id: 20, symbol: "チ", name: "研究開発費", is_income: false # KENKYUU_KAIHATSUHI = 20
+AccountTitle.create id: 21, symbol: "ツ", name: "材料",       is_income: false # ZAIRYOU = 21
+AccountTitle.create id: 22, symbol: "テ", name: "製品",       is_income: false # SEIHIN = 22
+AccountTitle.create id: 23, symbol: "ト", name: "特別損失",   is_income: false # TOKUBETSU_SONSHITSU = 23
+AccountTitle.create id: 24, symbol: "ナ", name: "借入金返済", is_income: false # KARIIREKIN_HENSAI = 24
+AccountTitle.create id: 25, symbol: "ニ", name: "配当・納税", is_income: false # HAITOU_NOUZEI = 25
+AccountTitle.create id: 26, symbol: "ヌ", name: "買掛金支払", is_income: false # KAIKAKEKIN_SHIHARAI = 26
 
 # stock_rooms
 StockRoom.create id: 1, symbol: '倉', name: '倉庫'

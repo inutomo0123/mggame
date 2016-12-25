@@ -3,7 +3,7 @@ class Journal::UrikakekinNyuukinController < ApplicationController
     def index
       @journal_urikakekin_nyuukins = Journal.where(
           entry_id: current_entry.id,
-          account_title_id: Journal::URIKAKEKIN_NYUUKIN_ID
+          account_title_id: Journal::URIKAKEKIN_NYUUKIN
         )
 
     end
@@ -14,7 +14,7 @@ class Journal::UrikakekinNyuukinController < ApplicationController
     def new
       @journal_urikakekin_nyuukin = Journal.new(
           entry_id: current_entry.id,
-          account_title_id: Journal::URIKAKEKIN_NYUUKIN_ID
+          account_title_id: Journal::URIKAKEKIN_NYUUKIN
         )
 
     end
@@ -23,8 +23,9 @@ class Journal::UrikakekinNyuukinController < ApplicationController
     end
 
     def create
+
       @journal_urikakekin_nyuukin = Journal.new({entry_id: current_entry.id,
-        account_title_id: Journal::URIKAKEKIN_NYUUKIN_ID}.marge journal_urikakekin_nyuukin_params)
+        account_title_id: Journal::URIKAKEKIN_NYUUKIN}.merge(journal_urikakekin_nyuukin_params))
 
       respond_to do |format|
         if @journal_urikakekin_nyuukin.save
@@ -73,11 +74,12 @@ class Journal::UrikakekinNyuukinController < ApplicationController
         @journal_urikakekin_nyuukin = Journal.find(param[:id])
           .where(
             entry_id: current_entry.id,
-            account_title_id: Journal::URIKAKEKIN_NYUUKIN_ID
+            account_title_id: Journal::URIKAKEKIN_NYUUKIN
           )
       end
 
       def journal_urikakekin_nyuukin_params
         params.require(:journal_urikakekin_nyuukin).permit(:amount)
       end
+
 end
