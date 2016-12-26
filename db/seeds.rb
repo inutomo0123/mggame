@@ -101,3 +101,11 @@ DecisionMaking.create id: 13, symbol: 'J', name: 'マーケット・リサーチ
 DecisionMaking.create id: 14, symbol: 'K', name: '銀行借入', is_anytime: true
 DecisionMaking.create id: 15, symbol: 'L', name: '配置転換', is_anytime: true
 DecisionMaking.create id: 16, symbol: 'M', name: '機械売却', is_anytime: true
+
+# markets
+Market.create id: 1, symbol: '東', name: '東京',   volume: 20, material_price: 15, max_bid_price: 20
+Market.create id: 2, symbol: '大', name: '大阪',   volume: 13, material_price: 14, max_bid_price: 24
+Market.create id: 3, symbol: '名', name: '名古屋', volume: 9,  material_price: 13, max_bid_price: 28
+Market.create id: 4, symbol: '福', name: '福岡',   volume: 6,  material_price: 12, max_bid_price: 32
+Market.create id: 5, symbol: '札', name: '札幌',   volume: 4,  material_price: 11, max_bid_price: 36
+Market.create id: 6, symbol: '仙', name: '仙台',   volume: 3,  material_price: 10, max_bid_price: 40

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161226064932) do
+ActiveRecord::Schema.define(version: 20161226084251) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,                 null: false
@@ -127,6 +127,18 @@ ActiveRecord::Schema.define(version: 20161226064932) do
     t.datetime "updated_at",            null: false
     t.index ["name"], name: "index_machine_tools_on_name", unique: true, using: :btree
     t.index ["symbol"], name: "index_machine_tools_on_symbol", unique: true, using: :btree
+  end
+
+  create_table "markets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "symbol",         limit: 1,  null: false
+    t.string   "name",           limit: 50, null: false
+    t.integer  "volume",                    null: false
+    t.integer  "material_price",            null: false
+    t.integer  "max_bid_price",             null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["name"], name: "index_markets_on_name", unique: true, using: :btree
+    t.index ["symbol"], name: "index_markets_on_symbol", unique: true, using: :btree
   end
 
   create_table "options", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
