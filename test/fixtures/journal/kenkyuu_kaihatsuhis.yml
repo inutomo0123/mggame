@@ -1,0 +1,17 @@
+one:
+  id: 120
+  entry: one
+  account_title_id: 20
+  type: 'Journal::KenkyuuKaihatsuhi'
+  amount: <%= 120 * 20 %>
+  price: 120
+  quantity: 20
+
+two:
+  id: 220
+  entry: one
+  account_title_id: 20
+  type: 'Journal::KenkyuuKaihatsuhi'
+  amount: <%= 220 * 20 %>
+  price: 220
+  quantity: 20

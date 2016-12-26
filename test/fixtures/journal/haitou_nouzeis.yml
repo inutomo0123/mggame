@@ -1,0 +1,13 @@
+one:
+  id: 125
+  entry: one
+  account_title_id: 25
+  type: 'Journal::HaitouNouzei'
+  amount: 125
+
+two:
+  id: 225
+  entry: one
+  account_title_id: 25
+  type: 'Journal::HaitouNouzei'
+  amount: 225

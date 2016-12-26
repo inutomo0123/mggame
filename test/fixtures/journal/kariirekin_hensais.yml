@@ -1,0 +1,13 @@
+one:
+  id: 124
+  entry: one
+  account_title_id: 24
+  type: 'Journal::KariirekinHensai'
+  amount: 124
+
+two:
+  id: 224
+  entry: one
+  account_title_id: 24
+  type: 'Journal::KariirekinHensai'
+  amount: 224

@@ -1,0 +1,13 @@
+one:
+  id: 123
+  entry: one
+  account_title_id: 23
+  type: 'Journal::TokubetsuSonshitsu'
+  amount: 123
+
+two:
+  id: 223
+  entry: one
+  account_title_id: 23
+  type: 'Journal::TokubetsuSonshitsu'
+  amount: 223

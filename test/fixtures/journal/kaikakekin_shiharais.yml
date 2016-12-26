@@ -1,0 +1,13 @@
+one:
+  id: 126
+  entry: one
+  account_title_id: 26
+  type: 'Journal::KaikakekinShiharai'
+  amount: 126
+
+two:
+  id: 226
+  entry: one
+  account_title_id: 26
+  type: 'Journal::KaikakekinShiharai'
+  amount: 226

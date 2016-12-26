@@ -1,0 +1,17 @@
+one:
+  id: 121
+  entry: one
+  account_title_id: 21
+  type: 'Journal::Zairyou'
+  amount: <%= 121 * 21 %>
+  price: 121
+  quantity: 21
+
+two:
+  id: 221
+  entry: one
+  account_title_id: 21
+  type: 'Journal::Zairyou'
+  amount: <%= 221 * 21 %>
+  price: 221
+  quantity: 21

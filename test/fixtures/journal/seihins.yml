@@ -1,0 +1,17 @@
+one:
+  id: 122
+  entry: one
+  account_title_id: 22
+  type: 'Journal::Seihin'
+  amount: <%= 122 * 22 %>
+  price: 122
+  quantity: 22
+
+two:
+  id: 222
+  entry: one
+  account_title_id: 22
+  type: 'Journal::Seihin'
+  amount: <%= 222 * 22 %>
+  price: 222
+  quantity: 22
