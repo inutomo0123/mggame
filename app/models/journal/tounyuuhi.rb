@@ -1,6 +1,6 @@
-class Journal::Uriage < Journal::Journal
+class Journal::Tounyuuhi < Journal::Journal
 
-  ACCOUNT_TITLE_ID = 7
+  ACCOUNT_TITLE_ID = 13
 
   before_validation {
     self.account_title_id ||= ACCOUNT_TITLE_ID

@@ -1,0 +1,17 @@
+one:
+  id: 113
+  entry: one
+  account_title_id: 13
+  type: 'Journal::Tounyuuhi'
+  amount: <%= 113 * 13 %>
+  price: 113
+  quantity: 13
+
+two:
+  id: 213
+  entry: one
+  account_title_id: 13
+  type: 'Journal::Tounyuuhi'
+  amount: <%= 213 * 13 %>
+  price: 213
+  quantity: 13

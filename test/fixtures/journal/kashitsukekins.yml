@@ -1,0 +1,13 @@
+one:
+  id: 111
+  entry: one
+  account_title_id: 11
+  type: 'Journal::Kashitsukekin'
+  amount: 111
+
+two:
+  id: 211
+  entry: one
+  account_title_id: 11
+  type: 'Journal::Kashitsukekin'
+  amount: 211

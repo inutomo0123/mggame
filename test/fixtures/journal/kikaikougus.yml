@@ -1,0 +1,13 @@
+one:
+  id: 112
+  entry: one
+  account_title_id: 12
+  type: 'Journal::Kikaikougu'
+  amount: 112
+
+two:
+  id: 212
+  entry: one
+  account_title_id: 12
+  type: 'Journal::Kikaikougu'
+  amount: 212

@@ -1,0 +1,17 @@
+one:
+  id: 114
+  entry: one
+  account_title_id: 14
+  type: 'Journal::Kanseihi'
+  amount: <%= 114 * 14 %>
+  price: 114
+  quantity: 14
+
+two:
+  id: 214
+  entry: one
+  account_title_id: 14
+  type: 'Journal::Kanseihi'
+  amount: <%= 214 * 14 %>
+  price: 214
+  quantity: 14
