@@ -1,0 +1,13 @@
+one:
+  id: 102
+  entry: one
+  account_title_id: 2
+  type: 'Journal::KikaiBaikyaku'
+  amount: 102
+
+two:
+  id: 202
+  entry: one
+  account_title_id: 2
+  type: 'Journal::KikaiBaikyaku'
+  amount: 202

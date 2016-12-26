@@ -1,0 +1,13 @@
+one:
+  id: 101
+  entry: one
+  account_title_id: 1
+  type: 'Journal::UrikakekinNyuukin'
+  amount: 101
+
+two:
+  id: 201
+  entry: one
+  account_title_id: 1
+  type: 'Journal::UrikakekinNyuukin'
+  amount: 201

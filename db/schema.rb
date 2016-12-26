@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219152823) do
+ActiveRecord::Schema.define(version: 20161225121241) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,  null: false
@@ -87,6 +87,23 @@ ActiveRecord::Schema.define(version: 20161219152823) do
     t.datetime "updated_at",            null: false
     t.index ["name"], name: "index_jobs_on_name", unique: true, using: :btree
     t.index ["symbol"], name: "index_jobs_on_symbol", unique: true, using: :btree
+  end
+
+  create_table "journal_journals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "entry_id",         null: false
+    t.integer  "account_title_id", null: false
+    t.string   "type"
+    t.integer  "serial",           null: false
+    t.integer  "price"
+    t.integer  "quantity"
+    t.integer  "amount",           null: false
+    t.string   "remarks"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["account_title_id"], name: "index_journal_journals_on_account_title_id", using: :btree
+    t.index ["entry_id", "account_title_id"], name: "index_journal_journals_on_entry_id_and_account_title_id", using: :btree
+    t.index ["entry_id", "serial"], name: "index_journal_journals_on_entry_id_and_serial", unique: true, using: :btree
+    t.index ["entry_id"], name: "index_journal_journals_on_entry_id", using: :btree
   end
 
   create_table "machine_tools", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -176,6 +193,8 @@ ActiveRecord::Schema.define(version: 20161219152823) do
   add_foreign_key "entries", "players"
   add_foreign_key "games", "rounds"
   add_foreign_key "games", "tables"
+  add_foreign_key "journal_journals", "account_titles"
+  add_foreign_key "journal_journals", "entries"
   add_foreign_key "options", "chips"
   add_foreign_key "options", "entries"
   add_foreign_key "players", "clients"
