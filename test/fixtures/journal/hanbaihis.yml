@@ -1,0 +1,13 @@
+one:
+  id: 117
+  entry: one
+  account_title_id: 17
+  type: 'Journal::Hanbaihi'
+  amount: 117
+
+two:
+  id: 217
+  entry: one
+  account_title_id: 17
+  type: 'Journal::Hanbaihi'
+  amount: 217

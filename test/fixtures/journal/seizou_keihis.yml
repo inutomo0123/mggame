@@ -1,0 +1,13 @@
+one:
+  id: 116
+  entry: one
+  account_title_id: 16
+  type: 'Journal::SeizouKeihi'
+  amount: 116
+
+two:
+  id: 216
+  entry: one
+  account_title_id: 16
+  type: 'Journal::SeizouKeihi'
+  amount: 216

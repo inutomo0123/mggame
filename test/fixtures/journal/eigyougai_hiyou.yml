@@ -1,0 +1,13 @@
+one:
+  id: 119
+  entry: one
+  account_title_id: 19
+  type: 'Journal::EigyougaiHiyou'
+  amount: 119
+
+two:
+  id: 219
+  entry: one
+  account_title_id: 19
+  type: 'Journal::EigyougaiHiyou'
+  amount: 219

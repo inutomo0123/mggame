@@ -1,0 +1,13 @@
+one:
+  id: 115
+  entry: one
+  account_title_id: 15
+  type: 'Journal::Roumuhi'
+  amount: 115
+
+two:
+  id: 215
+  entry: one
+  account_title_id: 15
+  type: 'Journal::Roumuhi'
+  amount: 215

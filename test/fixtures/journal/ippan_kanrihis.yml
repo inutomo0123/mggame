@@ -1,0 +1,13 @@
+one:
+  id: 118
+  entry: one
+  account_title_id: 18
+  type: 'Journal::IppanKanrihi'
+  amount: 118
+
+two:
+  id: 218
+  entry: one
+  account_title_id: 18
+  type: 'Journal::IppanKanrihi'
+  amount: 218
