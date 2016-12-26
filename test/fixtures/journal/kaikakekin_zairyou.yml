@@ -1,0 +1,17 @@
+one:
+  id: 132
+  entry: one
+  account_title_id: 32
+  type: 'Journal::KaikakekinZairyou'
+  amount: <%= 132 * 32 %>
+  price: 132
+  quantity: 32
+
+two:
+  id: 232
+  entry: one
+  account_title_id: 32
+  type: 'Journal::KaikakekinZairyou'
+  amount: <%= 232 * 32 %>
+  price: 232
+  quantity: 32

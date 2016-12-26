@@ -1,0 +1,17 @@
+one:
+  id: 131
+  entry: one
+  account_title_id: 31
+  type: 'Journal::UrikakekinUriage'
+  amount: <%= 131 * 31 %>
+  price: 131
+  quantity: 31
+
+two:
+  id: 231
+  entry: one
+  account_title_id: 31
+  type: 'Journal::UrikakekinUriage'
+  amount: <%= 231 * 31 %>
+  price: 231
+  quantity: 31
