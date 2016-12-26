@@ -1,0 +1,13 @@
+one:
+  id: 104
+  entry: one
+  account_title_id: 4
+  type: 'Journal::UketoriHokenkin'
+  amount: 104
+
+two:
+  id: 204
+  entry: one
+  account_title_id: 4
+  type: 'Journal::UketoriHokenkin'
+  amount: 204

@@ -1,0 +1,13 @@
+one:
+  id: 103
+  entry: one
+  account_title_id: 3
+  type: 'Journal::EigyougaiShuueki'
+  amount: 103
+
+two:
+  id: 203
+  entry: one
+  account_title_id: 3
+  type: 'Journal::EigyougaiShuueki'
+  amount: 203
