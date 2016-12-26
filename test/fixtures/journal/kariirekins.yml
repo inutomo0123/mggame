@@ -1,0 +1,13 @@
+one:
+  id: 105
+  entry: one
+  account_title_id: 5
+  type: 'Journal::Kariirekin'
+  amount: 105
+
+two:
+  id: 205
+  entry: one
+  account_title_id: 5
+  type: 'Journal::Kariirekin'
+  amount: 205

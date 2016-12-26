@@ -1,0 +1,13 @@
+one:
+  id: 106
+  entry: one
+  account_title_id: 6
+  type: 'Journal::Shihonkin'
+  amount: 106
+
+two:
+  id: 206
+  entry: one
+  account_title_id: 6
+  type: 'Journal::Shihonkin'
+  amount: 206

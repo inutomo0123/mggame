@@ -1,0 +1,17 @@
+one:
+  id: 107
+  entry: one
+  account_title_id: 7
+  type: 'Journal::Uriage'
+  amount: <%= 107 * 7 %>
+  price: 107
+  quantity: 7
+
+two:
+  id: 207
+  entry: one
+  account_title_id: 7
+  type: 'Journal::Uriage'
+  amount: <%= 207 * 7 %>
+  price: 207
+  quantity: 7
