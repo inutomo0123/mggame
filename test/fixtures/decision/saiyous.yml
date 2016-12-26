@@ -1,0 +1,11 @@
+one:
+  id: 104
+  entry: one
+  decision_making_id: 4
+  type: 'Decision::Saiyou'
+
+two:
+  id: 204
+  entry: one
+  decision_making_id: 4
+  type: 'Decision::Saiyou'

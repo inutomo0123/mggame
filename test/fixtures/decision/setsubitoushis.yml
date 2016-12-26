@@ -1,0 +1,11 @@
+one:
+  id: 102
+  entry: one
+  decision_making_id: 2
+  type: 'Decision::Setsubitoushi'
+
+two:
+  id: 202
+  entry: one
+  decision_making_id: 2
+  type: 'Decision::Setsubitoushi'

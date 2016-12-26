@@ -1,0 +1,11 @@
+one:
+  id: 113
+  entry: one
+  decision_making_id: 13
+  type: 'Decision::MarketResearch'
+
+two:
+  id: 213
+  entry: one
+  decision_making_id: 13
+  type: 'Decision::MarketResearch'

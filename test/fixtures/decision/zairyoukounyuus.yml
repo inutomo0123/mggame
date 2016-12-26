@@ -1,0 +1,11 @@
+one:
+  id: 101
+  entry: one
+  decision_making_id: 1
+  type: 'Decision::Zairyoukounyuu'
+
+two:
+  id: 201
+  entry: one
+  decision_making_id: 1
+  type: 'Decision::Zairyoukounyuu'

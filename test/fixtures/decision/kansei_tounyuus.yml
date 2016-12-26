@@ -1,0 +1,11 @@
+one:
+  id: 103
+  entry: one
+  decision_making_id: 3
+  type: 'Decision::KanseiTounyuu'
+
+two:
+  id: 203
+  entry: one
+  decision_making_id: 3
+  type: 'Decision::KanseiTounyuu'

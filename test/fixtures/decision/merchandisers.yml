@@ -1,0 +1,11 @@
+one:
+  id: 112
+  entry: one
+  decision_making_id: 12
+  type: 'Decision::Merchandiser'
+
+two:
+  id: 212
+  entry: one
+  decision_making_id: 12
+  type: 'Decision::Merchandiser'

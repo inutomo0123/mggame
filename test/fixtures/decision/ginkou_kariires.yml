@@ -1,0 +1,11 @@
+one:
+  id: 114
+  entry: one
+  decision_making_id: 14
+  type: 'Decision::GinkouKariire'
+
+two:
+  id: 214
+  entry: one
+  decision_making_id: 14
+  type: 'Decision::GinkouKariire'

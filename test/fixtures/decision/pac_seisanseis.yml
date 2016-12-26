@@ -1,0 +1,11 @@
+one:
+  id: 111
+  entry: one
+  decision_making_id: 11
+  type: 'Decision::PacSeisansei'
+
+two:
+  id: 211
+  entry: one
+  decision_making_id: 11
+  type: 'Decision::PacSeisansei'

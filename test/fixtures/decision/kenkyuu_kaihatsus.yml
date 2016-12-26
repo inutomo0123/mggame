@@ -1,0 +1,11 @@
+one:
+  id: 106
+  entry: one
+  decision_making_id: 6
+  type: 'Decision::KenkyuuKaihatsu'
+
+two:
+  id: 206
+  entry: one
+  decision_making_id: 6
+  type: 'Decision::KenkyuuKaihatsu'

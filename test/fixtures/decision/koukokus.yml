@@ -1,0 +1,11 @@
+one:
+  id: 105
+  entry: one
+  decision_making_id: 5
+  type: 'Decision::Koukoku'
+
+two:
+  id: 205
+  entry: one
+  decision_making_id: 5
+  type: 'Decision::Koukoku'
