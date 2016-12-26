@@ -7,9 +7,4 @@ class Journal::Journal < ApplicationRecord
 
   validates :amount, presence: true, numericality: :only_integer
 
-  # トリガーで採番されたシリアルを取り込む
-  def sync_serial
-    reload
-  end
-
 end

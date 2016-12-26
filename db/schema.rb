@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161226054511) do
+ActiveRecord::Schema.define(version: 20161226064932) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,                 null: false
@@ -49,6 +49,19 @@ ActiveRecord::Schema.define(version: 20161226054511) do
     t.datetime "updated_at",             null: false
     t.index ["provider_id", "name"], name: "index_clients_on_provider_id_and_name", unique: true, using: :btree
     t.index ["provider_id"], name: "index_clients_on_provider_id", using: :btree
+  end
+
+  create_table "decision_decisions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "entry_id",           null: false
+    t.integer  "decision_making_id", null: false
+    t.string   "type"
+    t.integer  "serial",             null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["decision_making_id"], name: "index_decision_decisions_on_decision_making_id", using: :btree
+    t.index ["entry_id", "decision_making_id"], name: "index_decision_decisions_on_entry_id_and_decision_making_id", using: :btree
+    t.index ["entry_id", "serial"], name: "index_decision_decisions_on_entry_id_and_serial", unique: true, using: :btree
+    t.index ["entry_id"], name: "index_decision_decisions_on_entry_id", using: :btree
   end
 
   create_table "decision_makings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -190,6 +203,8 @@ ActiveRecord::Schema.define(version: 20161226054511) do
   end
 
   add_foreign_key "clients", "providers"
+  add_foreign_key "decision_decisions", "decision_makings"
+  add_foreign_key "decision_decisions", "entries"
   add_foreign_key "entries", "games"
   add_foreign_key "entries", "players"
   add_foreign_key "games", "rounds"
