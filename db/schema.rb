@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161226084251) do
+ActiveRecord::Schema.define(version: 20161226113529) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,                 null: false
@@ -72,6 +72,19 @@ ActiveRecord::Schema.define(version: 20161226084251) do
     t.datetime "updated_at",            null: false
     t.index ["name"], name: "index_decision_makings_on_name", unique: true, using: :btree
     t.index ["symbol"], name: "index_decision_makings_on_symbol", unique: true, using: :btree
+  end
+
+  create_table "decision_zairyoukounyuu_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "decision_decision_id", null: false
+    t.integer  "market_id",            null: false
+    t.integer  "price",                null: false
+    t.integer  "quantity",             null: false
+    t.integer  "amount",               null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["decision_decision_id", "market_id"], name: "index_d_zairyoukounyuu_details_on_d_decision_id_market_id", unique: true, using: :btree
+    t.index ["decision_decision_id"], name: "index_decision_zairyoukounyuu_details_on_decision_decision_id", using: :btree
+    t.index ["market_id"], name: "index_decision_zairyoukounyuu_details_on_market_id", using: :btree
   end
 
   create_table "entries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -217,6 +230,8 @@ ActiveRecord::Schema.define(version: 20161226084251) do
   add_foreign_key "clients", "providers"
   add_foreign_key "decision_decisions", "decision_makings"
   add_foreign_key "decision_decisions", "entries"
+  add_foreign_key "decision_zairyoukounyuu_details", "decision_decisions"
+  add_foreign_key "decision_zairyoukounyuu_details", "markets"
   add_foreign_key "entries", "games"
   add_foreign_key "entries", "players"
   add_foreign_key "games", "rounds"

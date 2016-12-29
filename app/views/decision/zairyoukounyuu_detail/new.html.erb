@@ -1,0 +1,21 @@
+<h2>材料購入詳細/new</h2>
+<%= form_for @zairyoukounyuu_detail ,url:{action: :create}  do |f| %>
+  <%#= render "shared/errors", object:  %>
+  <table>
+    <thead>
+      <tr>
+        <th>市場</th>
+        <th>単価</th>
+        <th>数量</th>
+        <th>金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "input" , locals: {f: f}%>
+
+    </tbody>
+  </table>
+
+
+
+<% end %>

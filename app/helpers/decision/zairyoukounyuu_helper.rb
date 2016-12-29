@@ -1,0 +1,2 @@
+module Decision::ZairyoukounyuuHelper
+end

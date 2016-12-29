@@ -1,0 +1,43 @@
+<div style="width:480px">
+
+<h2>意思決定/材料購入/new</h2>
+<%= form_for @object, url: { action: :create } do |f| %>
+  <%#= render "shared/errors", object: @object %>
+
+  <%= f.text_field :type %>
+  <table>
+    <thead>
+      <tr>
+        <th>市場</th>
+        <th>単価</th>
+        <th>数量</th>
+        <th>金額</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @object.details.each do |detail| %>
+      <%= f.fields_for detail do |m| %>
+          <tr>
+            <th><%= detail.market.name%></th>
+            <td><%= detail.price %><%#= m.text_field :price %></td>
+            <td><%= m.text_field :quantity %></td>
+            <td><%= m.text_field :amount %></td>
+          </tr>
+      <% end %>
+    <% end %>
+    <tr>
+      <th>合計</th>
+      <td></td>
+      <td>xxx,xxx</td>
+      <td>xxx,xxx</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="4"><%= f.submit %></th>
+    </tr>
+  </tfoot>
+</table>
+
+<% end %>
+</div>
