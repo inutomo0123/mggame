@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161231100817) do
+ActiveRecord::Schema.define(version: 20161231130256) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,                 null: false
@@ -62,6 +62,20 @@ ActiveRecord::Schema.define(version: 20161231100817) do
     t.index ["entry_id", "decision_making_id"], name: "index_decision_decisions_on_entry_id_and_decision_making_id", using: :btree
     t.index ["entry_id", "serial"], name: "index_decision_decisions_on_entry_id_and_serial", unique: true, using: :btree
     t.index ["entry_id"], name: "index_decision_decisions_on_entry_id", using: :btree
+  end
+
+  create_table "decision_kansei_tounyuu_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "entry_id",                        null: false
+    t.integer  "decision_decision_id",            null: false
+    t.string   "operation",            limit: 50, null: false
+    t.integer  "price",                           null: false
+    t.integer  "quantity",                        null: false
+    t.integer  "amount",                          null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["decision_decision_id"], name: "index_decision_kansei_tounyuu_details_on_decision_decision_id", using: :btree
+    t.index ["entry_id", "decision_decision_id", "operation"], name: "index_kansei_tounyuu_on_entry_decision_opration", unique: true, using: :btree
+    t.index ["entry_id"], name: "index_decision_kansei_tounyuu_details_on_entry_id", using: :btree
   end
 
   create_table "decision_makings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -260,6 +274,8 @@ ActiveRecord::Schema.define(version: 20161231100817) do
   add_foreign_key "clients", "providers"
   add_foreign_key "decision_decisions", "decision_makings"
   add_foreign_key "decision_decisions", "entries"
+  add_foreign_key "decision_kansei_tounyuu_details", "decision_decisions"
+  add_foreign_key "decision_kansei_tounyuu_details", "entries"
   add_foreign_key "decision_saiyou_details", "decision_decisions"
   add_foreign_key "decision_saiyou_details", "entries"
   add_foreign_key "decision_saiyou_details", "jobs"
