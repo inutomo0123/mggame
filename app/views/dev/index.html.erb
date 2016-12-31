@@ -1,0 +1,14 @@
+<% Path.get.each do | mdl | %>
+  <h2><%= mdl[:name]%></h2>
+  <ul>
+    <% (mdl[:classes] || []).each do |cls| %>
+      <li><%= cls[:name] %>
+        <ul>
+        <% (cls[:actions] || []).each do |action| %>
+          <li><%= action[:name] %></li>
+        <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

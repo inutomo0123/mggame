@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#one:
+#  entry: one
+#  decision_decision: one
+#  job: one
+#  number: 1
+
+#two:
+#  entry: two
+#  decision_decision: two
+#  job: two
+#  number: 1
