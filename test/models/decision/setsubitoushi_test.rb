@@ -9,4 +9,14 @@ class Decision::SetsubitoushiTest < ActiveSupport::TestCase
     assert_equal un.decision_making_id, Decision::Setsubitoushi::DECISION_MAKING_ID
   end
 
+  test "詳細が記録される" do
+    eid = entries(:one).id
+    st = Decision::Setsubitoushi.new entry_id: eid
+    st.details.build entry_id: eid, machine_tool_id: 1, price: 20, quantity: 10, amount: 200
+    st.details.build entry_id: eid, machine_tool_id: 2, price: 20, quantity: 20, amount: 400
+    st.details.build entry_id: eid, machine_tool_id: 3, price: 20, quantity: 30, amount: 600
+    st.save!
+    st.reload
+    assert_equal st.details.length,3
+  end
 end

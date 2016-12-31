@@ -109,3 +109,4 @@ Market.create id: 3, symbol: '名', name: '名古屋', volume: 9,  material_pric
 Market.create id: 4, symbol: '福', name: '福岡',   volume: 6,  material_price: 12, max_bid_price: 32
 Market.create id: 5, symbol: '札', name: '札幌',   volume: 4,  material_price: 11, max_bid_price: 36
 Market.create id: 6, symbol: '仙', name: '仙台',   volume: 3,  material_price: 10, max_bid_price: 40
+Market.create id: 9, symbol: '外', name: '場外',   volume: 99, material_price: 16, max_bid_price: 99

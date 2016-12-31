@@ -6,7 +6,7 @@ class Decision::SaiyouDetail < ApplicationRecord
     class_name: Decision::Saiyou,
     foreign_key: 'decision_decision_id',
     inverse_of: :details
-    }
+  }
 
   validates :number, presence: true, numericality: :only_integer
 end

@@ -10,7 +10,8 @@ class CreateDecisionSaiyouDetails < ActiveRecord::Migration[5.0]
     end
 
     add_index :decision_saiyou_details,
-      [ :entry_id, :decision_decision_id, :job_id ], unique: true,
-      name: 'index_d_saiyou_details_on_entry_id_d_decision_decision_id_job_id'
+      [ :entry_id, :decision_decision_id, :job_id ],
+      unique: true,
+      name: 'index_saiyou_details_on_entry_decision_job_id'
   end
 end

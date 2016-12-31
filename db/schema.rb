@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161229154416) do
+ActiveRecord::Schema.define(version: 20161231100817) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,                 null: false
@@ -82,12 +82,28 @@ ActiveRecord::Schema.define(version: 20161229154416) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.index ["decision_decision_id"], name: "index_decision_saiyou_details_on_decision_decision_id", using: :btree
-    t.index ["entry_id", "decision_decision_id", "job_id"], name: "index_d_saiyou_details_on_entry_id_d_decision_decision_id_job_id", unique: true, using: :btree
+    t.index ["entry_id", "decision_decision_id", "job_id"], name: "index_d_saiyou_details_on_entry_decision_job_id", unique: true, using: :btree
     t.index ["entry_id"], name: "index_decision_saiyou_details_on_entry_id", using: :btree
     t.index ["job_id"], name: "index_decision_saiyou_details_on_job_id", using: :btree
   end
 
+  create_table "decision_setsubitoushi_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "entry_id",             null: false
+    t.integer  "decision_decision_id", null: false
+    t.integer  "machine_tool_id",      null: false
+    t.integer  "price",                null: false
+    t.integer  "quantity",             null: false
+    t.integer  "amount",               null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["decision_decision_id"], name: "index_decision_setsubitoushi_details_on_decision_decision_id", using: :btree
+    t.index ["entry_id", "decision_decision_id", "machine_tool_id"], name: "index_setsubitoushi_details_on_entry_decision_machine_tool_id", unique: true, using: :btree
+    t.index ["entry_id"], name: "index_decision_setsubitoushi_details_on_entry_id", using: :btree
+    t.index ["machine_tool_id"], name: "index_decision_setsubitoushi_details_on_machine_tool_id", using: :btree
+  end
+
   create_table "decision_zairyoukounyuu_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "entry_id",             null: false
     t.integer  "decision_decision_id", null: false
     t.integer  "market_id",            null: false
     t.integer  "price",                null: false
@@ -95,8 +111,9 @@ ActiveRecord::Schema.define(version: 20161229154416) do
     t.integer  "amount",               null: false
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
-    t.index ["decision_decision_id", "market_id"], name: "index_d_zairyoukounyuu_details_on_d_decision_id_market_id", unique: true, using: :btree
     t.index ["decision_decision_id"], name: "index_decision_zairyoukounyuu_details_on_decision_decision_id", using: :btree
+    t.index ["entry_id", "decision_decision_id", "market_id"], name: "index_d_zairyoukounyuu_details_on_entry_decision_market_id", unique: true, using: :btree
+    t.index ["entry_id"], name: "index_decision_zairyoukounyuu_details_on_entry_id", using: :btree
     t.index ["market_id"], name: "index_decision_zairyoukounyuu_details_on_market_id", using: :btree
   end
 
@@ -246,7 +263,11 @@ ActiveRecord::Schema.define(version: 20161229154416) do
   add_foreign_key "decision_saiyou_details", "decision_decisions"
   add_foreign_key "decision_saiyou_details", "entries"
   add_foreign_key "decision_saiyou_details", "jobs"
+  add_foreign_key "decision_setsubitoushi_details", "decision_decisions"
+  add_foreign_key "decision_setsubitoushi_details", "entries"
+  add_foreign_key "decision_setsubitoushi_details", "machine_tools"
   add_foreign_key "decision_zairyoukounyuu_details", "decision_decisions"
+  add_foreign_key "decision_zairyoukounyuu_details", "entries"
   add_foreign_key "decision_zairyoukounyuu_details", "markets"
   add_foreign_key "entries", "games"
   add_foreign_key "entries", "players"
