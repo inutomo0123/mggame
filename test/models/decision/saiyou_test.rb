@@ -13,8 +13,8 @@ class Decision::SaiyouTest < ActiveSupport::TestCase
     eid = entries(:one).id
     obj = Decision::Saiyou.new
     obj.entry_id =  eid
-    obj.saiyou_details.build entry_id: eid, job_id: 1, number: 3
-    obj.saiyou_details.build entry_id: eid, job_id: 2, number: 5
+    obj.details.build entry_id: eid, job_id: 1, number: 3
+    obj.details.build entry_id: eid, job_id: 2, number: 5
     obj.save!
     assert true
 
