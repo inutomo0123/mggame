@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170101043554) do
+ActiveRecord::Schema.define(version: 20170101051003) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,                 null: false
@@ -39,6 +39,20 @@ ActiveRecord::Schema.define(version: 20170101043554) do
     t.datetime "updated_at",            null: false
     t.index ["name"], name: "index_behavior_types_on_name", unique: true, using: :btree
     t.index ["symbol"], name: "index_behavior_types_on_symbol", unique: true, using: :btree
+  end
+
+  create_table "behaviors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "entry_id",                     null: false
+    t.integer  "behavior_type_id",             null: false
+    t.integer  "serial"
+    t.integer  "parent_id"
+    t.integer  "depth",            default: 1, null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["behavior_type_id"], name: "index_behaviors_on_behavior_type_id", using: :btree
+    t.index ["entry_id", "parent_id"], name: "index_behaviors_on_entry_id_and_parent_id", using: :btree
+    t.index ["entry_id", "serial"], name: "index_behaviors_on_entry_id_and_serial", unique: true, using: :btree
+    t.index ["entry_id"], name: "index_behaviors_on_entry_id", using: :btree
   end
 
   create_table "chips", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -283,6 +297,8 @@ ActiveRecord::Schema.define(version: 20170101043554) do
     t.index ["client_id"], name: "index_trainings_on_client_id", using: :btree
   end
 
+  add_foreign_key "behaviors", "behavior_types"
+  add_foreign_key "behaviors", "entries"
   add_foreign_key "clients", "providers"
   add_foreign_key "decision_decisions", "decision_makings"
   add_foreign_key "decision_decisions", "entries"
