@@ -110,3 +110,10 @@ Market.create id: 4, symbol: '福', name: '福岡',   volume: 6,  material_price
 Market.create id: 5, symbol: '札', name: '札幌',   volume: 4,  material_price: 11, max_bid_price: 36
 Market.create id: 6, symbol: '仙', name: '仙台',   volume: 3,  material_price: 10, max_bid_price: 40
 Market.create id: 9, symbol: '外', name: '場外',   volume: 99, material_price: 16, max_bid_price: 99
+
+# behavior_types
+BehaviorType.create id: 1,  symbol: '仕', name: '仕訳'
+BehaviorType.create id: 2,  symbol: '決', name: '意思決定'
+BehaviorType.create id: 3,  symbol: 'リ', name: 'リスク対応'
+BehaviorType.create id: 4,  symbol: '首', name: '期首処理'
+BehaviorType.create id: 5,  symbol: '末', name: '期末処理'

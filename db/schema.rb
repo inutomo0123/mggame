@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161231130256) do
+ActiveRecord::Schema.define(version: 20170101043554) do
 
   create_table "account_titles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "symbol",     limit: 1,                 null: false
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20161231130256) do
     t.datetime "updated_at",            null: false
     t.index ["name"], name: "index_account_types_on_name", unique: true, using: :btree
     t.index ["symbol"], name: "index_account_types_on_symbol", unique: true, using: :btree
+  end
+
+  create_table "behavior_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "symbol",     limit: 1,  null: false
+    t.string   "name",       limit: 50, null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["name"], name: "index_behavior_types_on_name", unique: true, using: :btree
+    t.index ["symbol"], name: "index_behavior_types_on_symbol", unique: true, using: :btree
   end
 
   create_table "chips", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
