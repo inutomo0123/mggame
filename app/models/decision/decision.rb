@@ -5,5 +5,4 @@ class Decision::Decision < ApplicationRecord
   validates :decision_making, presence: true
 
   before_validation { self.decision_making_id ||= self.class::DECISION_MAKING_ID }
-
 end

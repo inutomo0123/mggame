@@ -3,9 +3,11 @@ one:
   entry: one
   decision_making_id: 12
   type: 'Decision::Merchandiser'
+  amount: 112
 
 two:
   id: 212
   entry: one
   decision_making_id: 12
   type: 'Decision::Merchandiser'
+  amount: 212

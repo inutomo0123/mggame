@@ -3,9 +3,12 @@ one:
   entry: one
   decision_making_id: 16
   type: 'Decision::KikaiBaikyaku'
+  amount: 116
 
 two:
   id: 216
   entry: one
   decision_making_id: 16
   type: 'Decision::KikaiBaikyaku'
+  amount: 216
+  

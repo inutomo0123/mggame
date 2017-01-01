@@ -3,9 +3,11 @@ one:
   entry: one
   decision_making_id: 15
   type: 'Decision::Haichitenkan'
+  amount: 115
 
 two:
   id: 215
   entry: one
   decision_making_id: 15
   type: 'Decision::Haichitenkan'
+  amount: 215

@@ -3,9 +3,11 @@ one:
   entry: one
   decision_making_id: 1
   type: 'Decision::Zairyoukounyuu'
+  amount: 101
 
 two:
   id: 201
   entry: one
   decision_making_id: 1
   type: 'Decision::Zairyoukounyuu'
+  amount: 201

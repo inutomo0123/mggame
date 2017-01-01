@@ -3,9 +3,12 @@ one:
   entry: one
   decision_making_id: 14
   type: 'Decision::GinkouKariire'
+  amount: 114
 
 two:
   id: 214
   entry: one
   decision_making_id: 14
   type: 'Decision::GinkouKariire'
+  amount: 214
+  

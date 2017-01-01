@@ -3,9 +3,11 @@ one:
   entry: one
   decision_making_id: 5
   type: 'Decision::Koukoku'
+  amount: 105
 
 two:
   id: 205
   entry: one
   decision_making_id: 5
   type: 'Decision::Koukoku'
+  amount: 205

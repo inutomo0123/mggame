@@ -3,9 +3,11 @@ one:
   entry: one
   decision_making_id: 3
   type: 'Decision::KanseiTounyuu'
+  amount: 103
 
 two:
   id: 203
   entry: one
   decision_making_id: 3
   type: 'Decision::KanseiTounyuu'
+  amount: 203

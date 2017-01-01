@@ -56,6 +56,9 @@ ActiveRecord::Schema.define(version: 20161231130256) do
     t.integer  "decision_making_id", null: false
     t.string   "type"
     t.integer  "serial",             null: false
+    t.integer  "price"
+    t.integer  "quantity"
+    t.integer  "amount",             null: false
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["decision_making_id"], name: "index_decision_decisions_on_decision_making_id", using: :btree
@@ -96,7 +99,7 @@ ActiveRecord::Schema.define(version: 20161231130256) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.index ["decision_decision_id"], name: "index_decision_saiyou_details_on_decision_decision_id", using: :btree
-    t.index ["entry_id", "decision_decision_id", "job_id"], name: "index_d_saiyou_details_on_entry_decision_job_id", unique: true, using: :btree
+    t.index ["entry_id", "decision_decision_id", "job_id"], name: "index_saiyou_details_on_entry_decision_job_id", unique: true, using: :btree
     t.index ["entry_id"], name: "index_decision_saiyou_details_on_entry_id", using: :btree
     t.index ["job_id"], name: "index_decision_saiyou_details_on_job_id", using: :btree
   end
@@ -126,7 +129,7 @@ ActiveRecord::Schema.define(version: 20161231130256) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.index ["decision_decision_id"], name: "index_decision_zairyoukounyuu_details_on_decision_decision_id", using: :btree
-    t.index ["entry_id", "decision_decision_id", "market_id"], name: "index_d_zairyoukounyuu_details_on_entry_decision_market_id", unique: true, using: :btree
+    t.index ["entry_id", "decision_decision_id", "market_id"], name: "index_zairyoukounyuu_details_on_entry_decision_market_id", unique: true, using: :btree
     t.index ["entry_id"], name: "index_decision_zairyoukounyuu_details_on_entry_id", using: :btree
     t.index ["market_id"], name: "index_decision_zairyoukounyuu_details_on_market_id", using: :btree
   end

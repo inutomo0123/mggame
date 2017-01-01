@@ -3,9 +3,11 @@ one:
   entry: one
   decision_making_id: 10
   type: 'Decision::Hoken'
+  amount: 110
 
 two:
   id: 210
   entry: one
   decision_making_id: 10
   type: 'Decision::Hoken'
+  amount: 210

@@ -3,9 +3,12 @@ one:
   entry: one
   decision_making_id: 6
   type: 'Decision::KenkyuuKaihatsu'
+  amount: 106
 
 two:
   id: 206
   entry: one
   decision_making_id: 6
   type: 'Decision::KenkyuuKaihatsu'
+  amount: 206
+  

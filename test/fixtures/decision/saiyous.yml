@@ -3,9 +3,11 @@ one:
   entry: one
   decision_making_id: 4
   type: 'Decision::Saiyou'
+  amount: 104
 
 two:
   id: 204
   entry: one
   decision_making_id: 4
   type: 'Decision::Saiyou'
+  amount: 204

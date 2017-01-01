@@ -3,9 +3,11 @@ one:
   entry: one
   decision_making_id: 13
   type: 'Decision::MarketResearch'
+  amount: 113
 
 two:
   id: 213
   entry: one
   decision_making_id: 13
   type: 'Decision::MarketResearch'
+  amount: 213
