@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get 'dev', to: 'dev#index'
 
   namespace :journal do
-    resources :urikakekin_nyuukin
+    resources :urikakekin_nyuukin # 1 売掛金入金
+    resources :kikai_baikyaku     # 2 機械売却
   end
 
   namespace :decision do
