@@ -4,11 +4,9 @@ class Journal::UrikakekinNyuukinController < ApplicationController
   end
 
   def create
-    # 売掛金入金
     @object =  Journal::UrikakekinNyuukin.new(journal_urikakekin_nyuukin_params)
     @object.entry_id = current_entry_id
 
-    # 行動
     b = Behavior.new behavior_type_id: 1, account_title_id: 1
     b.entry_id = current_entry_id
 

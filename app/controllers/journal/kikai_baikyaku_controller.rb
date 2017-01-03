@@ -4,11 +4,9 @@ class Journal::KikaiBaikyakuController < ApplicationController
   end
 
   def create
-    # 売掛金入金
     @object =  Journal::KikaiBaikyaku.new(journal_kikai_baikyaku_params)
     @object.entry_id = current_entry_id
 
-    # 行動
     b = Behavior.new behavior_type_id: 1, account_title_id: 2
     b.entry_id = current_entry_id
 

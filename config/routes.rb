@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :journal do
     resources :urikakekin_nyuukin # 1 売掛金入金
     resources :kikai_baikyaku     # 2 機械売却
+    resources :eigyougai_shuueki  # 3 営業外収益
   end
 
   namespace :decision do

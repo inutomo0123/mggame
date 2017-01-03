@@ -1,0 +1,2 @@
+module Journal::EigyougaiShuuekiHelper
+end
