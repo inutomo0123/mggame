@@ -48,10 +48,19 @@ table {
   td, th {
     vertical-align: middle;
     text-align: center;
+    border: solid 1px silver;
+    padding: 3px;
   }
 
 }
 
 input[type="text"] {
-  width: 6em;
+
+  &.integer {
+    width: 6em;
+  }
+
+  &.remarks {
+    width: 20em;
+  }
 }

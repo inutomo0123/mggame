@@ -42,17 +42,24 @@ ActiveRecord::Schema.define(version: 20170101051003) do
   end
 
   create_table "behaviors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "entry_id",                     null: false
-    t.integer  "behavior_type_id",             null: false
+    t.integer  "entry_id",             null: false
+    t.integer  "behavior_type_id",     null: false
     t.integer  "serial"
-    t.integer  "parent_id"
-    t.integer  "depth",            default: 1, null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.integer  "account_title_id"
+    t.integer  "decision_making_id"
+    t.integer  "risk_id"
+    t.integer  "journal_journal_id"
+    t.integer  "decision_decision_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["account_title_id"], name: "index_behaviors_on_account_title_id", using: :btree
     t.index ["behavior_type_id"], name: "index_behaviors_on_behavior_type_id", using: :btree
-    t.index ["entry_id", "parent_id"], name: "index_behaviors_on_entry_id_and_parent_id", using: :btree
+    t.index ["decision_decision_id"], name: "index_behaviors_on_decision_decision_id", using: :btree
+    t.index ["decision_making_id"], name: "index_behaviors_on_decision_making_id", using: :btree
     t.index ["entry_id", "serial"], name: "index_behaviors_on_entry_id_and_serial", unique: true, using: :btree
     t.index ["entry_id"], name: "index_behaviors_on_entry_id", using: :btree
+    t.index ["journal_journal_id"], name: "index_behaviors_on_journal_journal_id", using: :btree
+    t.index ["risk_id"], name: "index_behaviors_on_risk_id", using: :btree
   end
 
   create_table "chips", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

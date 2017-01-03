@@ -92,6 +92,7 @@ DecisionMaking.create id: 3, symbol: 'C', name: '完成・投入', is_anytime: f
 DecisionMaking.create id: 4, symbol: 'D', name: '採用', is_anytime: false
 DecisionMaking.create id: 5, symbol: 'E', name: '広告', is_anytime: false
 DecisionMaking.create id: 6, symbol: 'F', name: '研究開発', is_anytime: false
+DecisionMaking.create id: 7, symbol: 'N', name: '商品販売', is_anytime: false
 
 # いつでも実施可能
 DecisionMaking.create id: 10, symbol: 'G', name: '保険', is_anytime: true
