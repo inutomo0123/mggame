@@ -26,6 +26,6 @@ class Journal::KikaiBaikyakuController < ApplicationController
   private
 
     def journal_kikai_baikyaku_params
-      ppp = params.require(:journal_kikai_baikyaku).permit(:amount, :remarks)
+      params.require(:journal_kikai_baikyaku).permit(:amount, :remarks)
     end
 end

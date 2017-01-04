@@ -26,6 +26,6 @@ class Journal::EigyougaiShuuekiController < ApplicationController
   private
 
     def journal_eigyougai_shuueki_params
-      ppp = params.require(:journal_eigyougai_shuueki).permit(:amount, :remarks)
+      params.require(:journal_eigyougai_shuueki).permit(:amount, :remarks)
     end
 end

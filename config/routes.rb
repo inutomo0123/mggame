@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :urikakekin_nyuukin # 1 売掛金入金
     resources :kikai_baikyaku     # 2 機械売却
     resources :eigyougai_shuueki  # 3 営業外収益
+    resources :uketori_hokenkin   # 4 受取保険金
   end
 
   namespace :decision do

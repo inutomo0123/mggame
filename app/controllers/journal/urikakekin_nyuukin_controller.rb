@@ -26,6 +26,6 @@ class Journal::UrikakekinNyuukinController < ApplicationController
   private
 
     def journal_urikakekin_nyuukin_params
-      ppp = params.require(:journal_urikakekin_nyuukin).permit(:amount, :remarks)
+      params.require(:journal_urikakekin_nyuukin).permit(:amount, :remarks)
     end
 end

@@ -1,0 +1,2 @@
+module Journal::UketoriHokenkinHelper
+end
