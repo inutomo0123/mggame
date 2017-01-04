@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :kariirekin         # 5 借入金
     resources :shihonkin          # 6 資本金
     resources :uriage             # 7 売上
+    resources :kashitsukekin      # 8 貸付金
 
   end
 

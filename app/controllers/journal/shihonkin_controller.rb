@@ -7,7 +7,7 @@ class Journal::ShihonkinController < ApplicationController
     @object =  Journal::Shihonkin.new(journal_shihonkin_params)
     @object.entry_id = current_entry_id
 
-    b = Behavior.new behavior_type_id: 1, account_title_id: 1
+    b = Behavior.new behavior_type_id: 1, account_title_id: 6
     b.entry_id = current_entry_id
 
     begin

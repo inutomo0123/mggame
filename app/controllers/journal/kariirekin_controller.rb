@@ -7,7 +7,7 @@ class Journal::KariirekinController < ApplicationController
     @object =  Journal::Kariirekin.new(journal_kariirekin_params)
     @object.entry_id = current_entry_id
 
-    b = Behavior.new behavior_type_id: 1, account_title_id: 1
+    b = Behavior.new behavior_type_id: 1, account_title_id: 5
     b.entry_id = current_entry_id
 
     begin

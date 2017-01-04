@@ -1,0 +1,2 @@
+module Journal::KashitsukekinHelper
+end

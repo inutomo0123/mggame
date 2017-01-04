@@ -1,15 +1,15 @@
 require 'test_helper'
 
-class Journal::ShihonkinControllerTest < ActionDispatch::IntegrationTest
+class Journal::KashitsukekinControllerTest < ActionDispatch::IntegrationTest
 
     test "new" do
-      get new_journal_shihonkin_path
+      get new_journal_kashitsukekin_path
       assert_response :success
     end
 
     test "create" do
-      post journal_shihonkin_index_path, params: {
-        journal_shihonkin: {
+      post journal_kashitsukekin_index_path, params: {
+        journal_kashitsukekin: {
           amount: 9999,
           remarks: 'ZZZZ'
         }
