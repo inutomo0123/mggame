@@ -1,0 +1,2 @@
+module Journal::KariirekinHensaiHelper
+end
