@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     # resources :seihin    # 19 製品
     resources :tokubetsu_sonshitsu # 20 特別損失
     resources :kariirekin_hensai  # 21 借入金返済
+    resources :haitou_nouzei      # 22 配当・納税
 
   end
 
