@@ -1,0 +1,25 @@
+<div class="form-container">
+<h2>仕訳/一般管理費</h2>
+<%= form_for @object, url: { action: :create } do |f| %>
+<table>
+  <thead>
+    <tr>
+      <th>金額</th>
+      <th>摘要</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><%= f.text_field :amount, class: 'integer' %></th>
+      <th><%= f.text_field :remarks, class: 'remarks' %></th>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="2"><%= f.submit %></th>
+    </tr>
+  </tfoot>
+
+</table>
+<% end %>
+</div>

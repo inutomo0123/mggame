@@ -1,0 +1,2 @@
+module Journal::IppanKanrihiHelper
+end
