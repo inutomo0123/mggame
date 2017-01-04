@@ -19,6 +19,10 @@ Rails.application.routes.draw do
     resources :hanbaihi           # 14 販売費
     resources :ippan_kanrihi      # 15 一般管理費
     resources :eigyougai_hiyou    # 16 営業外費用
+    # resources :eigyougai_hiyou    # 17 研究開発
+    # resources :zairyou    # 18 材料
+    # resources :seihin    # 19 製品
+    resources :tokubetsu_sonshitsu # 20 特別損失
 
 
   end
