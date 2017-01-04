@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :eigyougai_shuueki  # 3 営業外収益
     resources :uketori_hokenkin   # 4 受取保険金
     resources :kariirekin         # 5 借入金
+    resources :shihonkin          # 6 資本金
+    resources :uriage             # 7 売上
 
   end
 

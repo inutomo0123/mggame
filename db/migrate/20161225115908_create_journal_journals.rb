@@ -5,7 +5,7 @@ class CreateJournalJournals < ActiveRecord::Migration[5.0]
       t.references :account_title, foreign_key: true, null: false
       t.string :type
       t.integer :serial,   null: false
-      t.integer :price,    null: true
+      t.decimal :price, precision: 8, scale: 2, null: true
       t.integer :quantity, null: true
       t.integer :amount,   null: false
       t.string :remarks,   null: true

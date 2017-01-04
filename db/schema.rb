@@ -194,16 +194,16 @@ ActiveRecord::Schema.define(version: 20170101051003) do
   end
 
   create_table "journal_journals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "entry_id",         null: false
-    t.integer  "account_title_id", null: false
+    t.integer  "entry_id",                                 null: false
+    t.integer  "account_title_id",                         null: false
     t.string   "type"
-    t.integer  "serial",           null: false
-    t.integer  "price"
+    t.integer  "serial",                                   null: false
+    t.decimal  "price",            precision: 8, scale: 2
     t.integer  "quantity"
-    t.integer  "amount",           null: false
+    t.integer  "amount",                                   null: false
     t.string   "remarks"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.index ["account_title_id"], name: "index_journal_journals_on_account_title_id", using: :btree
     t.index ["entry_id", "account_title_id"], name: "index_journal_journals_on_entry_id_and_account_title_id", using: :btree
     t.index ["entry_id", "serial"], name: "index_journal_journals_on_entry_id_and_serial", unique: true, using: :btree
