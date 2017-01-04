@@ -20,11 +20,12 @@ Rails.application.routes.draw do
     resources :ippan_kanrihi      # 15 一般管理費
     resources :eigyougai_hiyou    # 16 営業外費用
     # resources :eigyougai_hiyou    # 17 研究開発
-    # resources :zairyou    # 18 材料
-    # resources :seihin    # 19 製品
+    # resources :zairyou            # 18 材料
+    # resources :seihin             # 19 製品
     resources :tokubetsu_sonshitsu # 20 特別損失
     resources :kariirekin_hensai  # 21 借入金返済
     resources :haitou_nouzei      # 22 配当・納税
+    resources :kaikakekin_shiharai # 23 買掛金支払
 
   end
 
