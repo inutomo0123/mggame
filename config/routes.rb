@@ -9,8 +9,9 @@ Rails.application.routes.draw do
     resources :uketori_hokenkin   # 4 受取保険金
     resources :kariirekin         # 5 借入金
     resources :shihonkin          # 6 資本金
-    resources :uriage             # 7 売上
+    # resources :uriage             # 7 売上
     resources :kashitsukekin      # 8 貸付金
+    resources :kikaikougu         # 9 機会工具
 
   end
 
