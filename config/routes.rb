@@ -11,7 +11,10 @@ Rails.application.routes.draw do
     resources :shihonkin          # 6 資本金
     # resources :uriage             # 7 売上
     resources :kashitsukekin      # 8 貸付金
-    resources :kikaikougu         # 9 機会工具
+    resources :kikaikougu         # 9 機械工具
+    # resources :tounyuuhi          # 10 投入費
+    # resources :kanseihi           # 11 完成費
+    resources :roumuhi            # 12 労務費
 
   end
 

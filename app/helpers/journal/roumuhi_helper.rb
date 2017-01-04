@@ -1,0 +1,2 @@
+module Journal::RoumuhiHelper
+end
