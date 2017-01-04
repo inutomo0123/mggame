@@ -1,0 +1,2 @@
+module Journal::SeizouKeihiHelper
+end

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     # resources :tounyuuhi          # 10 投入費
     # resources :kanseihi           # 11 完成費
     resources :roumuhi            # 12 労務費
+    resources :seizou_keihi       # 13 製造経費
 
   end
 
