@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :seizou_keihi       # 13 製造経費
     resources :hanbaihi           # 14 販売費
     resources :ippan_kanrihi      # 15 一般管理費
+    resources :eigyougai_hiyou    # 16 営業外費用
 
 
   end
