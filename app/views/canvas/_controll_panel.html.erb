@@ -1,10 +1,15 @@
 <div id="canvas_controll_panel" class="table-container">
   <div class="row-box">
-    <%= render 'canvas/decision' %>
+    <div class="cell-box">
+      <%= render 'canvas/decision_once' %>
+    </div>
+    <div class="cell-box">
+      <%= render 'canvas/journal' %>
+    </div>
   </div>
   <div class="row-box">
     <div class="cell-box">
-      <%= render 'canvas/journal' %>
+      <%= render 'canvas/decision_anytime' %>
     </div>
     <div class="cell-box">
       <%= render 'canvas/deal' %>

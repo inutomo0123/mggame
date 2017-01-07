@@ -44,7 +44,7 @@ div.widget {
       div.cell-box {
         display: table-cell;
         margin: 3px;
-        width: 33%;
+        //width: 33%;
       }
     }
 
@@ -140,6 +140,7 @@ div.table-container {
 
   div.row-box {
     display: table-row;
+    width: 100%;
   }
 
   div.cell-box {

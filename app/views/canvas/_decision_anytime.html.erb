@@ -1,0 +1,37 @@
+<%
+decision_anytime = [
+  {
+    保険: {  },
+    PAC生産性: { color: 'green' },
+  },
+  {
+    マーチャンダイザー: { color: 'green' },
+    マーケット・リサーチ: { color: 'green' },
+  },
+  {
+    銀行借入: { },
+    配置転換: { },
+    機械売却: { },
+  }
+]
+%>
+<div id="decision_anytime" class="widget">
+  <h2 class="title">意思決定（いつでも実施可能）</h2>
+  <div class="content">
+    <div class="table-container">
+      <% decision_anytime.each do |row| %>
+        <div class="row-box">
+          <div class="cell-box">
+            <% if row.length == 1 %>
+              <%= button_tag row.keys[0], style: 'width: 100%' %>
+            <% else %>
+              <% row.each do |key, value| %>
+                  <%= button_tag key, style: "width: #{ 100 / row.length - 2}%;" %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
