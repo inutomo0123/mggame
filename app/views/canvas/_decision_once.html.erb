@@ -14,8 +14,8 @@ decision_once = [
     採用: { large: false },
   },
   {
-    広告: { large: false },
-    研究開発: { large: false },
+    広告: { large: false, color: 'red' },
+    研究開発: { large: false, color: 'blue' },
   }
 ]
 %>
@@ -29,7 +29,7 @@ decision_once = [
             <% if row.length == 1 %>
               <%= button_tag row.keys[0], class: 'single' %>
             <% else %>
-              <% row.each do |key, value| %><%= button_tag key, class: 'double' -%><% end %>
+              <% row.each do |key, value| %><%= button_tag key, class: 'double ' + (value[:color] || '') -%><% end %>
             <% end %>
           </div>
         </div>

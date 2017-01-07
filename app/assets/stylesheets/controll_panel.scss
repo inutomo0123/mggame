@@ -1,8 +1,14 @@
-/*
-div#canvas_controll_panel {
-  button {
-    width: 100%;
-    white-space: nowrap;
-  }
+button {
+  &.green { background-color: #CFC; }
+  &.red   { background-color: #FCC;}
+  &.blue  { background-color: #CCF;}
 }
-*/
+
+button:hover {
+  background-color: lemonchiffon;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: orange;
+}

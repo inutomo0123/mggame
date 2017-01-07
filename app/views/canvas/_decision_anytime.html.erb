@@ -23,9 +23,9 @@ decision_anytime = [
         <div class="row-box">
           <div class="cell-box">
             <% if row.length == 2 %>
-              <% row.each do |key, value| %><%= button_tag key, class: 'double' -%><% end %>
+              <% row.each do |key, value| %><%= button_tag key, class: 'double ' + (value[:color] || '') -%><% end %>
             <% else %>
-              <% row.each do |key, value| %><%= button_tag key, class: 'triple' -%><% end %>
+              <% row.each do |key, value| %><%= button_tag key, class: 'triple ' + (value[:color] || '') -%><% end %>
             <% end %>
           </div>
         </div>
