@@ -1,2 +1,31 @@
 div#canvas_status {
+
+  div.cell-box {
+    width: 33%;
+    padding: 3px;
+    padding-bottom: 8px;
+  }
+
+  div.row-box:last-child div.cell-box {
+    padding-bottom: 3px;
+  }
+
+  table.data-panel {
+
+    &#seisan {
+      td { background-color: #CFC; }
+      strong { color: green; }
+    }
+
+    &#hanbai {
+      td { background-color: #FCC; }
+      strong { color: red; }
+    }
+
+    &#kakaku {
+      td { background-color: #CCF; }
+      strong { color: blue; }
+    }
+
+  }
 }

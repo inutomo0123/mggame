@@ -46,9 +46,7 @@ journals = [
       <% journals.each do |row| %>
         <div class="row-box">
           <% row.each do |key, value| %>
-            <div class="cell-box">
-              <%= button_tag key %>
-            </div>
+            <div class="cell-box"><%= button_tag key %></div>
           <% end %>
         </div>
       <% end %>

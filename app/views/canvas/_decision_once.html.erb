@@ -27,11 +27,9 @@ decision_once = [
         <div class="row-box">
           <div class="cell-box">
             <% if row.length == 1 %>
-              <%= button_tag row.keys[0], style: 'width: 100%' %>
+              <%= button_tag row.keys[0], class: 'single' %>
             <% else %>
-              <% row.each do |key, value| %>
-                  <%= button_tag key, style: "width: #{ 100 / row.length - 2}%;" %>
-              <% end %>
+              <% row.each do |key, value| %><%= button_tag key, class: 'double' -%><% end %>
             <% end %>
           </div>
         </div>

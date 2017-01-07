@@ -22,12 +22,10 @@ decision_anytime = [
       <% decision_anytime.each do |row| %>
         <div class="row-box">
           <div class="cell-box">
-            <% if row.length == 1 %>
-              <%= button_tag row.keys[0], style: 'width: 100%' %>
+            <% if row.length == 2 %>
+              <% row.each do |key, value| %><%= button_tag key, class: 'double' -%><% end %>
             <% else %>
-              <% row.each do |key, value| %>
-                  <%= button_tag key, style: "width: #{ 100 / row.length - 2}%;" %>
-              <% end %>
+              <% row.each do |key, value| %><%= button_tag key, class: 'triple' -%><% end %>
             <% end %>
           </div>
         </div>

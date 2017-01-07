@@ -1,3 +1,37 @@
+button {
+  margin: 2px;
+  width: calc(100% - 4px);
+  border-radius: 4px;
+  background-color: whitesmoke;
+  border: solid 1px gray;
+  font-weight: bold;
+  font-size: 0.7em;
+  line-height: 1.5em;
+  white-space: nowrap;
+  }
+
+button:hover {
+  background-color: lemonchiffon;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: lavender;
+}
+
+button.single {
+  width: calc(100% - 4px);
+}
+
+button.double {
+  width: calc(50% - 4px);
+}
+
+button.triple {
+  width: calc(33% - 4px);
+}
+
+
 /*
 * {
   -webkit-box-sizing: border-box;

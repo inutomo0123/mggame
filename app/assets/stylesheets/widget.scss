@@ -1,5 +1,5 @@
 div.widget {
-  border: solid 1px gray;
+  border: solid 1px silver;
   border-radius: 8px;
   margin: 5px;
   text-align: center;
@@ -11,14 +11,12 @@ div.widget {
     font-size: 0.75em;
     line-height: 1.5em;
     background-color: silver;
-    border-bottom: solid 1px gray;
-    //border-radius: 8px 8px 0px 0px;
+    border-bottom: solid 1px silver;
   }
 
   div.content {
     padding: 10px 5px;
     background-color: white;
-    //border-radius: 0px 0px 8px 8px;
 
     div.flex-container {
        display: flex;
@@ -27,8 +25,8 @@ div.widget {
        //background-color: red;
 
       div.flex-box {
-        margin: 3px;
-        width: 33%;
+        //margin: 3px;
+        //width: 33%;
         //background-color: green;
       }
     }
@@ -43,83 +41,54 @@ div.widget {
 
       div.cell-box {
         display: table-cell;
-        margin: 3px;
-        //width: 33%;
+        //margin: 3px;
       }
     }
 
-    table.data-panel {
-      font-size: 0.7em;
-      background-color: #FAF;
-      border: solid 1px gray;
-      margin: 2px;
-      margin-bottom: 8px;
-      padding: 0px;
-      border-collapse: separate;
-      border-spacing: 0px;
-      border-radius: 4px;
-      width: calc(100% - 6px);
-      overflow: hidden;
-
-      th, td {
-        margin: 0px;
-        padding: 2px;
-        border-bottom: solid 1px gray;
-      }
-
-      tbody th {
-        background-color: silver;
-        width: 50%;
-      }
-
-      tbody td {
-        background-color: white;
-        border-left: solid 1px gray;
-      }
-
-      thead th {
-        background-color: silver;
-      }
-
-      tbody tr:last-child th,
-      tbody tr:last-child td {
-        border-bottom: none;
-      }
-
-      &#seisan {
-        td {
-          background-color: #CFC;
-        }
-
-        strong {
-          color: green;
-        }
-      }
-
-      &#hanbai {
-        td {
-          background-color: #FCC;
-        }
-        strong {
-          color: red;
-        }
-      }
-
-      &#kakaku {
-        td {
-          background-color: #CCF;
-        }
-        strong {
-          color: blue;
-        }
-      }
-
-    }
   }
 }
 
-button {
+table.data-panel {
   font-size: 0.7em;
+  //background-color: #FAF;
+  border: solid 1px silver;
+  margin: 0px;
+  //margin-bottom: 8px;
+  padding: 0px;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-radius: 4px;
+  width: 100%;
+  overflow: hidden;
+
+  th, td {
+    margin: 0px;
+    padding: 2px;
+    border-bottom: solid 1px whitesmoke;
+  }
+
+  tbody th {
+    background-color: silver;
+    width: 50%;
+    font-weight: normal;
+
+  }
+
+  tbody td {
+    background-color: white;
+    border-left: solid 1px whitesmoke;
+  }
+
+  thead th {
+    background-color: silver;
+    border-bottom: solid 1px white;
+    white-space: nowrap;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
 }
 
 div.flex-container {
@@ -147,5 +116,7 @@ div.table-container {
     display: table-cell;
     padding: 1px;
     //width: 33%;
+    //background-color: yellow;
+
   }
 }
