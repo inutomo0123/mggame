@@ -1,0 +1,73 @@
+// Place all the styles related to the div controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+}
+
+div#canvas {
+  height: calc(100% - 16px);
+  width: calc(100% - 16px);
+  //background-color: #CCF;
+  margin: 8px;
+  padding: 0px;
+  position: absolute;
+
+  div#leftPain {
+    height: 100%;
+    width: 38%;
+    //background-color: #ACF;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow-y: scroll;
+
+    div#leftTopPain {
+      height: 38%;
+      width: 100%;
+      //background-color: red;
+      // overflow-y: scroll;
+    }
+
+    div#leftBottomPain {
+      height: 62%;
+      width: 100%;
+      //background-color: yellow;
+      // overflow-y: scroll;
+    }
+  }
+
+  div#rightPain {
+    height: 100%;
+    width: 62%;
+    background-color: #CAF;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    div#rightTopPain {
+      height: 62%;
+      width: 100%;
+      background-color: #FAC;
+      overflow-y: scroll;
+    }
+
+    div#rightBottomPain {
+      height: 38%;
+      width: 100%;
+      background-color: #CFC;
+      overflow-y: scroll;
+    }
+
+  }
+}

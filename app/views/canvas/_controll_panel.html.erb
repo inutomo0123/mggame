@@ -1,0 +1,113 @@
+<%
+journals = [
+  'ア 売掛金入金',
+  'イ 機械売却',
+  'ウ 営業外収益',
+  'エ 受取保険金',
+  'オ 借入金',
+  'カ 資本金',
+  'キ 売上',
+  'ク 貸付金',
+  'ケ 機械工具',
+  'コ 投入費',
+  'サ 完成費',
+  'シ 労務費',
+  'ス 製造経費',
+  'セ 販売費',
+  'ソ 一般管理費',
+  'タ 営業外費用',
+  'チ 研究開発費',
+  'ツ 材料購入',
+  'テ 製品',
+  'ト 特別損失',
+  'ナ 借入金返済',
+  '二 配当・納税',
+  'ヌ 買掛金支払'
+]
+
+decisions_once = {
+  材料購入: { large: true },
+  完成・投入: { large: true },
+  商品販売: { large: true },
+  設備投資: { large: false },
+  採用: { large: false },
+  広告: { large: false },
+  研究開発: { large: false },
+}
+
+decisions_anytime = {
+  保険: { large: true },
+  PAC生産性: { large: true },
+  マーチャンダイザー: { large: true },
+  マーケット・リサーチ: { large: true },
+  銀行借入: { large: false },
+  配置転換: { large: false },
+  機械売却: { large: false },
+}
+
+deals = {
+  '1.特別サービス': {},
+  '2.ワーカー退職': {},
+  '3.商品の独占販売': {},
+  '4.セールスマン退職': {},
+  '5.研究開発成功': {},
+  '6.クレーム発生': {},
+  '7.ストライキ発生': {},
+  '8.社長病気で倒る': {},
+  '9.盗難発見': {},
+  '10.製造ミス発生': {},
+  '11.倉庫火災': {},
+  '12.研究開発失敗': {},
+  '13.消費者運動発生': {},
+  '14.逆回り': {},
+  '15.労災発生': {},
+  '16.各社共通': {},
+  '17.機械故障': {},
+  '18.設計トラブル発生': {}
+}
+
+%>
+<div class="widget">
+  <h2 class="title">リスクに対処する</h2>
+  <div class="content">
+<% deals.each do |key, value| %>
+<%= button_tag key, style: 'width: 30%' %>
+<% end %>
+  </div>
+</div>
+
+
+<div class="widget">
+  <h2 class="title">意思決定（1回につき1項目選択）</h2>
+  <div class="content">
+<% decisions_once.each do |key, value| %>
+<% if value[:large] %>
+<div><%= button_tag key, style: 'width: 80%' %></div>
+<% else %>
+<%= button_tag key, style: 'width: 18%' %>
+<% end %>
+<% end %>
+  </div>
+</div>
+
+<div class="widget">
+  <h2 class="title">意思決定（いつでも実施可能）</h2>
+  <div class="content">
+<% decisions_anytime.each do |key, value| %>
+<% if value[:large] %>
+<%= button_tag key, style: 'width: 40%' %>
+<% else %>
+<%= button_tag key, style: 'width: 30%' %>
+<% end %>
+<% end %>
+  </div>
+</div>
+
+<div class="widget">
+  <h2 class="title">仕訳</h2>
+  <div class="content">
+<% journals.each do |button| %>
+<%= button_tag button, style: 'width: 125px' %>
+<% end %>
+  </div>
+</div>

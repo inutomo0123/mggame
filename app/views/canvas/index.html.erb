@@ -1,0 +1,21 @@
+<div id="canvas">
+  <div id="leftPain">
+    <!-- div id="leftTopPain" -->
+    <div class="widget">
+      <h2 class="title">ボタンテスト</h2>
+      <div class="content">
+        <%#= button_to'サムページ', div_same_page_path(), method: :get, remote: true %>
+      </div>
+    </div>
+    <%= render partial: 'canvas/status'%>
+    <!-- /div -->
+    <!-- div id="leftBottomPain" -->
+    <!-- /div -->
+  </div>
+  <div id="rightPain">
+    <div id="rightTopPain">
+      <%= render partial: 'canvas/controll_panel'%>
+    </div>
+    <div id="rightBottomPain"></div>
+  </div>
+</div>
