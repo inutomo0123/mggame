@@ -1,0 +1,50 @@
+<%
+decisions_once = {
+  材料購入: { large: true },
+  完成・投入: { large: true },
+  商品販売: { large: true },
+  設備投資: { large: false },
+  採用: { large: false },
+  広告: { large: false },
+  研究開発: { large: false },
+}
+
+decisions_anytime = {
+  保険: { large: true },
+  PAC生産性: { large: true, color: 'green' },
+  マーチャンダイザー: { large: true, color: 'green' },
+  マーケット・リサーチ: { large: true, color: 'green' },
+  銀行借入: { large: false },
+  配置転換: { large: false },
+  機械売却: { large: false },
+}
+%>
+<div class="cell-box">
+  <div id="decision_once" class="widget">
+    <h2 class="title">意思決定（1回につき1項目選択）</h2>
+    <div class="content">
+  <% decisions_once.each do |key, value| %>
+  <% if value[:large] %>
+  <div><%= button_tag key, class: 'large' %></div>
+  <% else %>
+  <%= button_tag key %>
+  <% end %>
+  <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="cell-box">
+  <div id="decision_anytime" class="widget">
+    <h2 class="title">意思決定（いつでも実施可能）</h2>
+    <div class="content">
+  <% decisions_anytime.each do |key, value| %>
+  <% if value[:large] %>
+  <div><%= button_tag key, class: 'large ' + (value[:color] || '') %></div>
+  <% else %>
+  <%= button_tag key %>
+  <% end %>
+  <% end %>
+    </div>
+  </div>
+</div>

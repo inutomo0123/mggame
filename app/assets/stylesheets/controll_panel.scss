@@ -1,0 +1,44 @@
+div#canvas_controll_panel {
+
+  div#decision_once {
+
+    button {
+      width: 45%;
+    }
+
+    button.large {
+      width: 100%;
+    }
+  }
+
+  div#decision_anytime {
+
+    button {
+      width: 30%;
+    }
+
+    button.large {
+      width: 100%;
+    }
+
+    button.green {
+      background-color: #CCF;
+    }
+  }
+
+  div#controll_panel_journal {
+
+    button {
+      width: 100%;
+    }
+  }
+
+  div#controll_panel_deal {
+
+    button {
+      width: 100%;
+    }
+
+
+  }
+}

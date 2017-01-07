@@ -37,6 +37,10 @@ div.widget {
       display: table;
       width: 100%;
 
+      div.row-box {
+        display: table-row;
+      }
+
       div.cell-box {
         display: table-cell;
         margin: 3px;
@@ -45,7 +49,7 @@ div.widget {
     }
 
     table.data-panel {
-      font-size: 0.75em;
+      font-size: 0.7em;
       background-color: #FAF;
       border: solid 1px gray;
       margin: 2px;
@@ -111,5 +115,36 @@ div.widget {
       }
 
     }
+  }
+}
+
+button {
+  font-size: 0.7em;
+}
+
+div.flex-container {
+   display: flex;
+   width:100%;
+   justify-content: center;
+   //background-color: red;
+
+  div.flex-box {
+    margin: 3px;
+    //background-color: green;
+  }
+}
+
+div.table-container {
+  display: table;
+  width: 100%;
+
+  div.row-box {
+    display: table-row;
+  }
+
+  div.cell-box {
+    display: table-cell;
+    padding: 1px;
+    //width: 33%;
   }
 }
