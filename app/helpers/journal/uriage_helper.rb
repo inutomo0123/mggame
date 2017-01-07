@@ -1,0 +1,2 @@
+module Journal::UriageHelper
+end

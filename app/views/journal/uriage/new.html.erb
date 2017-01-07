@@ -1,0 +1,31 @@
+<div class="form-container">
+<h2>仕訳/売上</h2>
+<%= form_for @object, url: { action: :create } do |f| %>
+<table>
+  <thead>
+    <tr>
+      <th>単価</th>
+      <th>数量</th>
+      <th>金額</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><%= f.text_field :price, class: 'integer' %></th>
+      <th><%= f.text_field :quantity, class: 'integer' %></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>摘要</th>
+      <td colspan="2"><%= f.text_field :remarks, class: 'remarks' %></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="3"><%= f.submit %></th>
+    </tr>
+  </tfoot>
+
+</table>
+<% end %>
+</div>
