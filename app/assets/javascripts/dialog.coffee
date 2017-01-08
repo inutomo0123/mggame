@@ -4,6 +4,8 @@ $ -> $('#canvas_dialog').click ->
   $('#canvas_mask').hide()
 
 $ -> $('#show_daialog').click ->
-  $('#canvas').addClass('blur')
-  $('#canvas_dialog').show()
-  $('#canvas_mask').show()
+  $.ajax(url: "/dev/dialog").done (html) ->
+    $('#dialog_content').html(html)
+    $('#canvas').addClass('blur')
+    $('#canvas_dialog').show()
+    $('#canvas_mask').show()
