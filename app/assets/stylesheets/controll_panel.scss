@@ -1,14 +1,38 @@
-button {
-  &.green { background-color: #CFC; }
-  &.red   { background-color: #FCC;}
-  &.blue  { background-color: #CCF;}
-}
+div#canvas_controll_panel {
 
-button:hover {
-  background-color: lemonchiffon;
-  cursor: pointer;
-}
+  button {
+    &.green { background-color: #CFC; }
+    &.red   { background-color: #FCC;}
+    &.blue  { background-color: #CCF;}
+  }
 
-button:active {
-  background-color: orange;
+  button:hover {
+    background-color: lemonchiffon;
+    cursor: pointer;
+  }
+
+  button:active {
+    background-color: orange;
+  }
+
+  div#controll_panel_deal h2.title {
+    background-color: crimson;
+    color: white;
+  }
+
+  div#decision_anytime h2.title {
+    background-color: teal;
+    color: white;
+  }
+
+  div#decision_once h2.title {
+    background-color: teal;
+    color: white;
+  }
+
+  div#controll_panel_journal h2.title{
+    background-color: steelblue;
+    color: white;
+  }
+
 }

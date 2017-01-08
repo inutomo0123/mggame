@@ -8,8 +8,81 @@ div#canvas_log{
     text-align: left;
     overflow-y: scroll;
     margin: 5px;
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
     padding: 5px;
-    font-size: 0.75em
+    font-size: 0.75em;
+
+    ul.logs {
+      margin: 0;
+      padding: 0px;
+
+      &>li {
+        display: block;
+        border: solid 1px silver;
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 4px;
+      }
+
+      &>li:nth-child(even) {
+        background-color: whitesmoke;
+      }
+    }
+
+
+    div.log {
+      border: solid 1px silver;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+
+      div {
+        border: solid 1px silver;
+        border-radius: 4px;
+        margin: 10px;
+        margin-left: 20px;
+        padding: 0;
+        background-color: white;
+      }
+
+      div:nth-child(even) {
+        background-color: whitesmoke;
+      }
+    }
+
+    div.log:nth-child(even) {
+      background-color: whitesmoke;
+    }
+  }
+
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  li.label {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    line-height: 1.1em;
+    color: white;
+    letter-spacing: 0.1em;
+    background-color: gray;
+
+    &.deal{
+      background-color: crimson;
+    }
+
+    &.decision{
+      background-color: teal;
+    }
+
+    &.journal{
+      background-color: steelblue;
+    }
   }
 }

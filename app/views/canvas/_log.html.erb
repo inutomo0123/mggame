@@ -1,15 +1,27 @@
 <div id="canvas_log" class="widget">
   <h2 class="title">記録</h2>
   <div class="content">
-    <% 100.times.each do %>
-    <div>ログ</div>
+    <% 10.times.each do %>
+      <div class="log">
+        <ul>
+          <li class="label serial">1</li><!--
+          --><li class="label deal">リスク対応</li><!--
+          --><li class="label">1.特別サービス</li>
+        </ul>
+        <div><ul><li class="label journal">仕訳</li></ul></div>
+        <div><ul><li class="label decision">意思決定</li></ul></div>
+        <div><ul><li class="label decision">意思決定</li></ul></div>
+      </div>
+      <div class="log">
+        <span class="label deal">リスク対応</span>
+        <div><span class="label journal">仕訳</span></div>
+        <div><span class="label decision">意思決定</span></div>
+      </div>
+      <div class="log"><span class="label journal">仕訳</span></div>
+      <div class="log"><span class="label journal">仕訳</span></div>
+      <div class="log"><span class="label decision">意思決定</span>
+        <div><span class="label journal">仕訳</span></div>
+      </div>
     <% end %>
-    <div>ああ亜ああああああ</div>
-    <div>ああ亜ああああああ</div>
-    <div>ああ亜ああああああ</div>
-    <div>ああ亜ああああああ</div>
-    <div>ああ亜ああああああ</div>
-    <div>ああ亜ああああああ</div>
-    <div>eof</div>
   </div>
 </div>
