@@ -1,21 +1,21 @@
 <%
 decision_once = [
   {
-    材料購入: { large: true },
+    材料購入: { },
   },
   {
-    完成・投入: { large: true },
+    完成・投入: { },
   },
   {
-    商品販売: { large: true },
+    商品販売: { },
   },
   {
-    設備投資: { large: false },
-    採用: { large: false },
+    設備投資: { },
+    採用: { },
   },
   {
-    広告: { large: false, color: 'red' },
-    研究開発: { large: false, color: 'blue' },
+    広告: { color: 'red' },
+    研究開発: { color: 'blue' },
   }
 ]
 %>
@@ -27,7 +27,7 @@ decision_once = [
         <div class="row-box">
           <div class="cell-box">
             <% if row.length == 1 %>
-              <%= button_tag row.keys[0], class: 'single' %>
+              <%= button_tag row.keys[0], class: 'single large' %>
             <% else %>
               <% row.each do |key, value| %><%= button_tag key, class: 'double ' + (value[:color] || '') -%><% end %>
             <% end %>

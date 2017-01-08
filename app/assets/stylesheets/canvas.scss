@@ -7,7 +7,7 @@
           box-sizing: border-box;
 }
 
-body {
+html, body {
   height: 100%;
   width: 100%;
   margin: 0px;
@@ -17,12 +17,12 @@ body {
 }
 
 div#canvas {
-  height: calc(100% - 0px);
-  width: calc(100% - 0px);
+  height: 100%;
+  width: 100%;
   //background-color: #CCF;
   margin: 0px;
   padding: 0px;
-  position: absolute;
+  position: relative;
 
   div#leftPain {
     height: 100%;
@@ -50,24 +50,25 @@ div#canvas {
 
   div#rightPain {
     height: 100%;
+    //max-height: 100%;
     width: 62%;
     //background-color: #CAF;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    //overflow-y: hidden;
 
     div#rightTopPain {
-      //height: 62%;
+      position: relative;
       width: 100%;
-      //background-color: #FAC;
       overflow-y: scroll;
     }
 
     div#rightBottomPain {
-      //height: 38%;
+      position: relative;
       width: 100%;
-      background-color: #CFC;
-      overflow-y: scroll;
+      //background-color: pink;
     }
 
   }
