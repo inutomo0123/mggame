@@ -2,8 +2,9 @@ div#canvas_controll_panel {
 
   button {
     &.green { background-color: #CFC; }
-    &.red   { background-color: #FCC;}
-    &.blue  { background-color: #CCF;}
+    &.red   { background-color: #FCC; }
+    &.blue  { background-color: #CCF; }
+    &.gray  { background-color: #AAA; }
   }
 
   button:hover {

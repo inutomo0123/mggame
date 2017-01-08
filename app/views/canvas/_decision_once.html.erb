@@ -1,29 +1,8 @@
-<%
-decision_once = [
-  {
-    材料購入: { },
-  },
-  {
-    完成・投入: { },
-  },
-  {
-    商品販売: { },
-  },
-  {
-    設備投資: { },
-    採用: { },
-  },
-  {
-    広告: { color: 'red' },
-    研究開発: { color: 'blue' },
-  }
-]
-%>
 <div id="decision_once" class="widget">
   <h2 class="title">意思決定（1回につき1項目選択）</h2>
   <div class="content">
     <div class="table-container">
-      <% decision_once.each do |row| %>
+      <% Decision.once_buttons.each do |row| %>
         <div class="row-box">
           <div class="cell-box">
             <% if row.length == 1 %>

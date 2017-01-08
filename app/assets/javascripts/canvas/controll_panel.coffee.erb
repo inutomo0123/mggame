@@ -1,0 +1,6 @@
+<% Journal.buttons.each do |row| %>
+  <% row.each do |key, value| %>
+$ -> $("#<%=value[:id]%>").click ->
+  alert "<%= key %>"
+  <% end %>
+<% end %>
