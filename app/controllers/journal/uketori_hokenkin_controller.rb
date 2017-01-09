@@ -1,4 +1,4 @@
-class Journal::UketoriHokenkinController < ApplicationController
+class Journal::UketoriHokenkinController < Journal::JournalBaseController
   def new
     @object = Journal::UketoriHokenkin.new
   end

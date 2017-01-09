@@ -1,4 +1,4 @@
-class Journal::SeizouKeihiController < ApplicationController
+class Journal::SeizouKeihiController < Journal::JournalBaseController
   def new
     @object = Journal::SeizouKeihi.new
   end

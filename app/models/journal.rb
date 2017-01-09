@@ -43,7 +43,7 @@ module Journal
       },
       {
         'ケ 機械工具': {
-          id: 'journal_kikai_kougu',
+          id: 'journal_kikaikougu',
           gray: true,
         },
         'コ 投入費': {
@@ -82,8 +82,8 @@ module Journal
           id: 'journal_kenkyuu_kaihatsuhi',
           gray: true,
         },
-        'ツ 材料購入': {
-          id: 'journal_zairyou_kounyuu',
+        'ツ 材料': {
+          id: 'journal_zairyou',
           gray: true,
         },
         'テ 製品': {
@@ -101,7 +101,7 @@ module Journal
           gray: true,
         },
         '二 配当・納税': {
-          id: 'journal_haitou_nouzai',
+          id: 'journal_haitou_nouzei',
           gray: true,
         },
         'ヌ 買掛金支払': {

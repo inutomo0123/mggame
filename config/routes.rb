@@ -17,16 +17,20 @@ Rails.application.routes.draw do
     resources :uriage             # 7 売上
     resources :kashitsukekin      # 8 貸付金
     resources :kikaikougu         # 9 機械工具
-    # resources :tounyuuhi          # 10 投入費
-    # resources :kanseihi           # 11 完成費
+
+     resources :tounyuuhi          # 10 投入費
+     resources :kanseihi           # 11 完成費
+
     resources :roumuhi            # 12 労務費
     resources :seizou_keihi       # 13 製造経費
     resources :hanbaihi           # 14 販売費
     resources :ippan_kanrihi      # 15 一般管理費
     resources :eigyougai_hiyou    # 16 営業外費用
-    # resources :eigyougai_hiyou    # 17 研究開発
-    # resources :zairyou            # 18 材料
-    # resources :seihin             # 19 製品
+
+     resources :kenkyuu_kaihatsuhi    # 17 研究開発
+     resources :zairyou            # 18 材料
+     resources :seihin             # 19 製品
+
     resources :tokubetsu_sonshitsu # 20 特別損失
     resources :kariirekin_hensai  # 21 借入金返済
     resources :haitou_nouzei      # 22 配当・納税

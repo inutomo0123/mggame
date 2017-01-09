@@ -1,4 +1,4 @@
-class Journal::RoumuhiController < ApplicationController
+class Journal::RoumuhiController < Journal::JournalBaseController
   def new
     @object = Journal::Roumuhi.new
   end

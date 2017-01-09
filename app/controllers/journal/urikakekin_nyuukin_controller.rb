@@ -1,4 +1,6 @@
-class Journal::UrikakekinNyuukinController < ApplicationController
+class Journal::UrikakekinNyuukinController < Journal::JournalBaseController
+  layout false
+
   def new
     @object = Journal::UrikakekinNyuukin.new
   end

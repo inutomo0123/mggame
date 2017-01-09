@@ -1,6 +1,11 @@
+<% url = Mggame::Application.routes.url_helpers %>
 <% Journal.buttons.each do |row| %>
   <% row.each do |key, value| %>
-$ -> $("#<%=value[:id]%>").click ->
-  alert "<%= key %>"
+    $ -> $("#<%=value[:id]%>").click ->
+      $.ajax(url: '<%= eval( "url.new_#{value[:id]}_path" ) %>').done (html) ->
+        $('#dialog_content').html(html)
+        $('#canvas').addClass('blur')
+        $('#canvas_dialog').show()
+        $('#canvas_mask').show()
   <% end %>
 <% end %>

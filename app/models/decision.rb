@@ -46,6 +46,7 @@ module Decision
       {
         保険: {
           id: 'decision_hoken',
+          color:  'cream'
         },
         PAC生産性: {
           id: 'decision_pac_seisansei',

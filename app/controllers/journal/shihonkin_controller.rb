@@ -1,4 +1,4 @@
-class Journal::ShihonkinController < ApplicationController
+class Journal::ShihonkinController < Journal::JournalBaseController
   def new
     @object = Journal::Shihonkin.new
   end

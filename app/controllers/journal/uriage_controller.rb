@@ -1,4 +1,4 @@
-class Journal::UriageController < ApplicationController
+class Journal::UriageController < Journal::JournalBaseController
   def new
     @object = Journal::Uriage.new
   end
